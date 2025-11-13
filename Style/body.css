@@ -1,0 +1,2076 @@
+/* Hero Section */
+.hero-section {
+  background: transparent;
+  color: #fff;
+  padding: 20px 20px 165px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Hero Video Background */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.hero-container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+  max-width: 900px;
+}
+
+.hero-title {
+  font-size: 84px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.hero-subtitle {
+  font-size: 27px;
+  color: #b0b0b0;
+  margin-bottom: 48px;
+  line-height: 1.6;
+}
+
+.highlight-blue {
+  color: #00c6c2;
+  font-weight: 600;
+}
+
+/* Hero Form */
+.hero-form {
+  position: relative;
+  margin-bottom: 48px;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 700px;
+}
+
+.hero-input {
+  flex: 1;
+  padding: 16px 20px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.hero-form:focus-within {
+  border-color: #00c6c2;
+}
+
+.hero-input::placeholder {
+  color: #666;
+}
+
+.hero-btn {
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #00c6c2, #83aacf);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.hero-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 198, 194, 0.4);
+}
+
+/* Auth Section */
+.hero-auth-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth-text {
+  color: #666;
+  font-size: 21px;
+}
+
+.auth-buttons-social {
+  display: flex;
+  gap: 18px;
+}
+
+.social-btn {
+  width: 66px;
+  height: 66px;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  border-color: #00c6c2;
+  transform: translateY(-2px);
+}
+
+.social-btn svg {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+}
+
+.download-app-section {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #333;
+}
+
+.download-text {
+  color: #666;
+  font-size: 21px;
+}
+
+.qr-btn {
+  width: 66px;
+  height: 66px;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-qr-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.qr-btn:hover {
+  border-color: #00c6c2;
+  transform: translateY(-2px);
+}
+
+.qr-btn svg {
+  color: #fff;
+  width: 30px;
+  height: 30px;
+}
+
+/* Hero QR Panel */
+.hero-qr-panel {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2d2d2d;
+  border: 1px solid #555;
+  border-radius: 16px;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 9999;
+  text-align: center;
+  min-width: 200px;
+}
+
+.hero-qr-panel::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 14px;
+  height: 14px;
+  background: #2d2d2d;
+  border-left: 1px solid #555;
+  border-top: 1px solid #555;
+}
+
+.hero-qr-wrapper:hover .hero-qr-panel {
+  opacity: 1;
+  visibility: visible;
+  top: calc(100% + 20px);
+}
+
+.hero-qr-text {
+  color: #fff;
+  font-size: 14px;
+  margin: 0 auto 12px auto;
+  text-align: center;
+}
+
+.hero-qr-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  margin: 0 auto 12px auto;
+  display: block;
+}
+
+.hero-qr-more-btn {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #555;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-qr-more-btn:hover {
+  border-color: #00c6c2;
+  background: rgba(0, 198, 194, 0.1);
+}
+
+/* Hero Cards */
+.hero-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.hero-card {
+  background: rgba(30, 30, 30, 0.6);
+  border: 1px solid #333;
+  border-radius: 24px;
+  padding: 36px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.card-title {
+  font-size: 30px;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.card-value {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.card-subtitle {
+  font-size: 30px;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.card-images {
+  display: flex;
+  align-items: center;
+  gap: -2px;
+}
+
+.card-images img {
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+  border: 2px solid #1a1a1a;
+}
+
+.more-traders {
+  width: 48px;
+  height: 48px;
+  background: #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #999;
+}
+
+/* Popular Card */
+.popular-card {
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.crypto-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.crypto-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.crypto-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.crypto-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.crypto-name {
+  font-size: 21px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.crypto-price-info {
+  text-align: right;
+}
+
+.crypto-price {
+  font-size: 21px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 3px;
+}
+
+.crypto-change {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.crypto-change.positive {
+  color: #0ecb81;
+}
+
+.crypto-change.negative {
+  color: #f6465d;
+}
+
+.view-more-btn {
+  width: 100%;
+  padding: 15px;
+  background: #2d2d2d;
+  border: 1px solid #333;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 21px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 18px;
+}
+
+.view-more-btn:hover {
+  border-color: #00c6c2;
+  background: rgba(0, 198, 194, 0.1);
+}
+
+.card-footer {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+}
+
+/* Copy Trading Card */
+.copy-trading-card {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Popular Card */
+.popular-card {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+
+/* Volume Card */
+.volume-card {
+  text-align: center;
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-value-large {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Light Mode */
+body.light-mode .hero-section {
+  background: #fff;
+}
+
+body.light-mode .hero-video {
+  opacity: 0.15;
+}
+
+body.light-mode .hero-title {
+  color: #1a1a1a;
+}
+
+body.light-mode .hero-subtitle {
+  color: #666;
+}
+
+body.light-mode .hero-form {
+  background: #fff;
+  border-color: #e0e0e0;
+}
+
+body.light-mode .hero-form:focus-within {
+  border-color: #00c6c2;
+}
+
+body.light-mode .hero-input {
+  color: #1a1a1a;
+}
+
+body.light-mode .hero-input::placeholder {
+  color: #999;
+}
+
+body.light-mode .auth-text,
+body.light-mode .download-text {
+  color: #666;
+}
+
+body.light-mode .social-btn,
+body.light-mode .qr-btn {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+body.light-mode .social-btn:hover,
+body.light-mode .qr-btn:hover {
+  border-color: #00c6c2;
+}
+
+body.light-mode .hero-qr-panel {
+  background: #fff;
+  border-color: #e0e0e0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .hero-qr-panel::before {
+  background: #fff;
+  border-left-color: #e0e0e0;
+  border-top-color: #e0e0e0;
+}
+
+body.light-mode .hero-qr-text {
+  color: #1a1a1a;
+}
+
+body.light-mode .hero-qr-more-btn {
+  border-color: #e0e0e0;
+  color: #1a1a1a;
+}
+
+body.light-mode .hero-qr-more-btn:hover {
+  border-color: #00c6c2;
+  background: rgba(0, 198, 194, 0.1);
+}
+
+body.light-mode .download-app-section {
+  border-left-color: #e0e0e0;
+}
+
+body.light-mode .hero-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: #e0e0e0;
+}
+
+body.light-mode .card-title {
+  color: #666;
+}
+
+body.light-mode .card-value,
+body.light-mode .card-value-large {
+  color: #1a1a1a;
+}
+
+body.light-mode .card-subtitle {
+  color: #999;
+}
+
+body.light-mode .more-traders {
+  background: #e0e0e0;
+  color: #666;
+}
+
+body.light-mode .crypto-name,
+body.light-mode .crypto-price {
+  color: #1a1a1a;
+}
+
+body.light-mode .view-more-btn {
+  background: #f5f5f5;
+  border-color: #e0e0e0;
+  color: #1a1a1a;
+}
+
+body.light-mode .view-more-btn:hover {
+  border-color: #00c6c2;
+  background: rgba(0, 198, 194, 0.1);
+}
+
+body.light-mode .card-footer {
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .hero-cards {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 20px 40px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-form {
+    flex-direction: column;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
+
+  .hero-auth-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .download-app-section {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+    padding-top: 16px;
+    border-top: 1px solid #333;
+    width: 100%;
+  }
+
+  .card-value {
+    font-size: 28px;
+  }
+
+  .card-value-large {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .auth-buttons-social {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Journey Section */
+.journey-section {
+  background: transparent;
+  color: #fff;
+  padding: 50px 20px 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.journey-tabs-wrapper {
+  max-width: 1400px;
+  margin: 0 auto 60px auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.journey-tabs {
+  display: flex;
+  gap: 40px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0;
+}
+
+.journey-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.journey-phone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.phone-video {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.phone-small-video {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+  height: auto;
+  border: 1px solid #555;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.journey-content {
+  max-width: 700px;
+}
+
+/* Journey Content Toggle */
+.journey-content-exchange,
+.journey-content-wallet {
+  display: none;
+}
+
+.journey-content-exchange.active,
+.journey-content-wallet.active {
+  display: grid;
+}
+
+.journey-tab {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 40px;
+  font-weight: 800px;
+  padding: 0 0 20px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+}
+
+.journey-tab:hover {
+  color: #fff;
+}
+
+.journey-tab.active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.journey-title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 60px;
+  color: #fff;
+}
+
+.journey-features {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.journey-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.feature-description {
+  font-size: 20px;
+  color: #999;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.journey-btn {
+  padding: 20px 48px;
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.journey-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+}
+
+/* Light Mode for Journey Section */
+body.light-mode .journey-section {
+  background: #fff;
+  color: #1a1a1a;
+}
+
+body.light-mode .journey-tabs {
+  border-bottom-color: #e0e0e0;
+}
+
+body.light-mode .journey-tab {
+  color: #999;
+}
+
+body.light-mode .journey-tab:hover {
+  color: #1a1a1a;
+}
+
+body.light-mode .journey-tab.active {
+  color: #1a1a1a;
+  border-bottom-color: #1a1a1a;
+}
+
+body.light-mode .journey-title {
+  color: #1a1a1a;
+}
+
+body.light-mode .feature-title {
+  color: #1a1a1a;
+}
+
+body.light-mode .feature-description {
+  color: #666;
+}
+
+body.light-mode .journey-btn {
+  background: #000;
+  color: #fff;
+}
+
+body.light-mode .journey-btn:hover {
+  background: #1a1a1a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Journey Section */
+@media (max-width: 1024px) {
+  .journey-tabs-wrapper {
+    padding: 0 20px;
+  }
+
+  .journey-tabs {
+    gap: 30px;
+  }
+
+  .journey-tab {
+    font-size: 24px;
+  }
+
+  .journey-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .journey-phone {
+    order: 2;
+    justify-content: center;
+  }
+
+  .journey-content {
+    order: 1;
+    max-width: 100%;
+  }
+
+  .phone-video {
+    max-width: 280px;
+  }
+
+  .phone-small-video {
+    width: 300px;
+  }
+
+  .journey-title {
+    font-size: 42px;
+  }
+
+  .feature-title {
+    font-size: 28px;
+  }
+
+  .feature-description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .journey-section {
+    padding: 40px 20px 60px;
+  }
+
+  .journey-tabs-wrapper {
+    margin-bottom: 40px;
+  }
+
+  .journey-tabs {
+    gap: 20px;
+  }
+
+  .journey-tab {
+    font-size: 22px;
+    padding: 0 0 15px 0;
+  }
+
+  .journey-title {
+    font-size: 34px;
+  }
+
+  .feature-title {
+    font-size: 26px;
+  }
+
+  .feature-description {
+    font-size: 17px;
+  }
+
+  .phone-video {
+    max-width: 260px;
+  }
+
+  .phone-small-video {
+    width: 280px;
+  }
+
+  .journey-btn {
+    padding: 18px 40px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .journey-tabs-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .journey-tabs {
+    gap: 15px;
+  }
+
+  .journey-tab {
+    font-size: 18px;
+    padding: 0 0 12px 0;
+  }
+
+  .journey-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .feature-title {
+    font-size: 22px;
+  }
+
+  .feature-description {
+    font-size: 15px;
+  }
+
+  .journey-features {
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .phone-video {
+    max-width: 220px;
+  }
+
+  .phone-small-video {
+    width: 220px;
+  }
+
+  .journey-btn {
+    padding: 16px 36px;
+    font-size: 17px;
+  }
+}
+
+/* Safe and Reliable Section */
+.safe-section {
+  background: transparent;
+  color: #fff;
+  padding: 100px 20px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.safe-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.safe-title {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.safe-subtitle {
+  font-size: 20px;
+  color: #999;
+  margin-bottom: 80px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.safe-video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.safe-video {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+/* Light Mode for Safe Section */
+body.light-mode .safe-section {
+  background: #fff;
+}
+
+body.light-mode .safe-title {
+  color: #1a1a1a;
+}
+
+body.light-mode .safe-subtitle {
+  color: #666;
+}
+
+/* Responsive Safe Section */
+@media (max-width: 1024px) {
+  .safe-title {
+    font-size: 42px;
+  }
+
+  .safe-subtitle {
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .safe-section {
+    padding: 60px 20px;
+  }
+
+  .safe-title {
+    font-size: 34px;
+  }
+
+  .safe-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .safe-section {
+    padding: 40px 20px;
+  }
+
+  .safe-title {
+    font-size: 28px;
+  }
+
+  .safe-subtitle {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Promotions Carousel Section */
+.promo-section {
+  background: transparent;
+  color: #fff;
+  padding: 10px 0 100px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.promo-container {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 60px;
+  width: 100%;
+}
+
+.promo-carousel {
+  width: 100%;
+  max-width: calc(1920px - 120px);
+  overflow: hidden;
+  position: relative;
+}
+
+.promo-track {
+  display: flex;
+  gap: 10px;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.promo-card {
+  width: calc((100% - 30px) / 4);
+  flex-shrink: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.promo-card:hover {
+  transform: translateY(-5px);
+}
+
+.promo-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid #333;
+}
+
+.promo-arrow {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  z-index: 10;
+  top: 50%;
+}
+
+.promo-arrow-left {
+  left: 60px;
+  transform: translate(-50%, -50%);
+}
+
+.promo-arrow-right {
+  right: 60px;
+  transform: translate(50%, -50%);
+}
+
+.promo-arrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.promo-arrow-left:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.promo-arrow-right:hover {
+  transform: translate(50%, -50%) scale(1.1);
+}
+
+.promo-arrow-left:active {
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+.promo-arrow-right:active {
+  transform: translate(50%, -50%) scale(0.95);
+}
+
+.promo-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Light Mode for Promo Section */
+body.light-mode .promo-section {
+  background: #f5f5f5;
+}
+
+body.light-mode .promo-arrow {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+}
+
+body.light-mode .promo-arrow:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Promo Section */
+@media (max-width: 1024px) {
+  .promo-card {
+    width: calc((100% - 20px) / 3);
+  }
+
+  .promo-container {
+    padding: 0 40px;
+  }
+
+  .promo-arrow-left {
+    left: 40px;
+  }
+
+  .promo-arrow-right {
+    right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-section {
+    padding: 40px 0;
+  }
+
+  .promo-card {
+    width: calc((100% - 10px) / 2);
+  }
+
+  .promo-container {
+    padding: 0 20px;
+  }
+
+  .promo-arrow-left {
+    left: 20px;
+  }
+
+  .promo-arrow-right {
+    right: 20px;
+  }
+
+  .promo-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .promo-arrow svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-card {
+    width: 100%;
+  }
+
+  .promo-container {
+    padding: 0 15px;
+  }
+
+  .promo-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .promo-track {
+    gap: 10px;
+  }
+}
+
+/* Trade Anytime Section */
+.trade-section {
+  background: transparent;
+  color: #fff;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.trade-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.trade-title {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #fff;
+}
+
+.trade-video-wrapper {
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 198, 194, 0.3);
+}
+
+.trade-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.trade-download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.trade-qr-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trade-qr-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  background: #fff;
+  padding: 8px;
+}
+
+.trade-download-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.trade-qr-text {
+  font-size: 20px;
+  color: #fff;
+  margin: 0;
+  text-align: left;
+}
+
+.trade-store-buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.store-btn {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.store-btn:hover {
+  background: #f5f5f5;
+  border-color: #00c6c2;
+  transform: translateY(-5px);
+}
+
+.store-btn svg {
+  width: 28px;
+  height: 28px;
+  color: #000;
+}
+
+/* Light Mode for Trade Section */
+body.light-mode .trade-section {
+  background: #fff;
+}
+
+body.light-mode .trade-title {
+  color: #1a1a1a;
+}
+
+body.light-mode .trade-qr-text {
+  color: #1a1a1a;
+}
+
+body.light-mode .store-btn {
+  background: #1a1a1a;
+  border-color: #333;
+  color: #fff;
+}
+
+body.light-mode .store-btn:hover {
+  background: #2a2a2a;
+  border-color: #00c6c2;
+}
+
+body.light-mode .store-btn svg {
+  color: #fff;
+}
+
+/* Responsive Trade Section */
+@media (max-width: 1024px) {
+  .trade-video-wrapper {
+    max-width: 900px;
+  }
+
+  .trade-title {
+    font-size: 42px;
+  }
+
+  .trade-download {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trade-section {
+    padding: 60px 20px;
+  }
+
+  .trade-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .trade-video-wrapper {
+    margin-bottom: 40px;
+    max-width: 500px;
+  }
+
+  .trade-qr-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .trade-qr-text {
+    font-size: 14px;
+  }
+
+  .trade-download {
+    gap: 30px;
+  }
+
+  .store-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .store-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trade-section {
+    padding: 40px 20px;
+  }
+
+  .trade-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .trade-video-wrapper {
+    margin-bottom: 30px;
+    max-width: 400px;
+  }
+
+  .trade-qr-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .trade-qr-text {
+    font-size: 13px;
+  }
+
+  .trade-download {
+    gap: 25px;
+  }
+
+  .store-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .store-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* TradingView Technology Section */
+.tradingview-section {
+  background: transparent;
+  color: #fff;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.tradingview-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.tradingview-logo {
+  flex-shrink: 0;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tradingview-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.tv-logo-text {
+  font-size: 96px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -6px;
+  line-height: 1;
+}
+
+.tradingview-content {
+  flex: 1;
+}
+
+.tradingview-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.tradingview-description {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #b0b0b0;
+  margin: 0;
+}
+
+.highlight-link {
+  color: #00c6c2;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.highlight-link:hover {
+  color: #00d9d4;
+}
+
+/* Light Mode for TradingView Section */
+body.light-mode .tradingview-section {
+  background: #fff;
+}
+
+body.light-mode .tradingview-title {
+  color: #1a1a1a;
+}
+
+body.light-mode .tradingview-description {
+  color: #666;
+}
+
+body.light-mode .tv-logo-text {
+  color: #1a1a1a;
+}
+
+/* Responsive TradingView Section */
+@media (max-width: 768px) {
+  .tradingview-section {
+    padding: 60px 20px;
+  }
+
+  .tradingview-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .tradingview-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .tv-logo-text {
+    font-size: 60px;
+  }
+
+  .tradingview-title {
+    font-size: 28px;
+  }
+
+  .tradingview-description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tradingview-section {
+    padding: 40px 20px;
+  }
+
+  .tradingview-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .tv-logo-text {
+    font-size: 48px;
+  }
+
+  .tradingview-title {
+    font-size: 24px;
+  }
+
+  .tradingview-description {
+    font-size: 14px;
+  }
+}
+
+/* FAQ Section */
+.faq-section {
+  background: transparent;
+  color: #fff;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  font-size: 56px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #fff;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid #333;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-question span {
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  flex: 1;
+  padding-right: 20px;
+}
+
+.faq-toggle {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 1px solid #555;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-toggle svg {
+  width: 18px;
+  height: 18px;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.faq-toggle:hover {
+  border-color: #00c6c2;
+  background: rgba(0, 198, 194, 0.1);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #999;
+  margin: 0;
+  padding-bottom: 24px;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+}
+
+.faq-item.active .faq-toggle svg {
+  transform: rotate(45deg);
+}
+
+/* Light Mode for FAQ Section */
+body.light-mode .faq-section {
+  background: #fff;
+}
+
+body.light-mode .faq-title {
+  color: #1a1a1a;
+}
+
+body.light-mode .faq-item {
+  border-bottom-color: #e0e0e0;
+}
+
+body.light-mode .faq-item:first-child {
+  border-top-color: #e0e0e0;
+}
+
+body.light-mode .faq-question span {
+  color: #1a1a1a;
+}
+
+body.light-mode .faq-toggle {
+  border-color: #e0e0e0;
+}
+
+body.light-mode .faq-toggle svg {
+  color: #1a1a1a;
+}
+
+body.light-mode .faq-toggle:hover {
+  border-color: #00c6c2;
+  background: rgba(0, 198, 194, 0.1);
+}
+
+body.light-mode .faq-answer p {
+  color: #666;
+}
+
+/* Responsive FAQ Section */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 60px 20px;
+  }
+
+  .faq-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .faq-question span {
+    font-size: 16px;
+  }
+
+  .faq-answer p {
+    font-size: 15px;
+  }
+
+  .faq-toggle {
+    width: 28px;
+    height: 28px;
+  }
+
+  .faq-toggle svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-section {
+    padding: 40px 20px;
+  }
+
+  .faq-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .faq-question {
+    padding: 20px 0;
+  }
+
+  .faq-question span {
+    font-size: 15px;
+  }
+
+  .faq-answer p {
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+}
+
+/* LaLiga Partnership Section */
+.laliga-section {
+  background: #000;
+  color: #fff;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.laliga-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  background: url("../Image/home-laliga-new.png") center center / cover
+    no-repeat;
+  z-index: 0;
+}
+
+.laliga-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+.laliga-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.laliga-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.laliga-logo {
+  margin-bottom: 10px;
+}
+
+.laliga-logo img {
+  height: 60px;
+  width: auto;
+}
+
+.laliga-title {
+  font-size: 64px;
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  line-height: 1;
+}
+
+.ea-badge {
+  font-size: 24px;
+  font-weight: 700;
+  background: #fff;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  line-height: 1.2;
+  display: inline-block;
+  text-align: center;
+}
+
+.laliga-subtitle {
+  font-size: 22px;
+  color: #fff;
+  max-width: 1200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.laliga-btn {
+  padding: 16px 48px;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.laliga-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
+}
+
+/* Light Mode for LaLiga Section */
+body.light-mode .laliga-section::before {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+}
+
+body.light-mode .laliga-title {
+  color: #1a1a1a;
+}
+
+body.light-mode .laliga-subtitle {
+  color: #1a1a1a;
+}
+
+body.light-mode .laliga-btn {
+  background: #000;
+  color: #fff;
+}
+
+body.light-mode .laliga-btn:hover {
+  background: #1a1a1a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive LaLiga Section */
+@media (max-width: 768px) {
+  .laliga-section {
+    padding: 80px 20px;
+  }
+
+  .laliga-logo img {
+    height: 50px;
+  }
+
+  .laliga-title {
+    font-size: 48px;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .ea-badge {
+    font-size: 20px;
+    padding: 6px 12px;
+  }
+
+  .laliga-subtitle {
+    font-size: 18px;
+  }
+
+  .laliga-btn {
+    padding: 14px 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .laliga-section {
+    padding: 60px 20px;
+  }
+
+  .laliga-logo img {
+    height: 40px;
+  }
+
+  .laliga-title {
+    font-size: 36px;
+    gap: 10px;
+  }
+
+  .ea-badge {
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+
+  .laliga-subtitle {
+    font-size: 16px;
+  }
+
+  .laliga-btn {
+    padding: 12px 36px;
+    font-size: 15px;
+  }
+}
+
+/* Standard Screen - Scale down to 80% */
+@media (max-width: 2559px) {
+  .hero-section,
+  .journey-section,
+  .safe-section,
+  .promo-section,
+  .trade-section,
+  .tradingview-section,
+  .faq-section,
+  .laliga-section {
+    zoom: 0.8;
+  }
+}
+
+/* Large Screen Adjustments (32 inch and above) - Keep original size */
+@media (min-width: 2560px) {
+  .hero-section,
+  .journey-section,
+  .safe-section,
+  .promo-section,
+  .trade-section,
+  .tradingview-section,
+  .faq-section,
+  .laliga-section {
+    zoom: 1;
+  }
+}
