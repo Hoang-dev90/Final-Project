@@ -304,24 +304,24 @@ nav {
 .nav-container {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 36px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: 90px;
 }
 
 /* Left Section */
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 7.5px;
 }
 
 /* Logo */
 .logo-icon {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background-color: #e5e5e5;
   border-radius: 50%;
 }
@@ -332,7 +332,7 @@ nav {
 }
 
 .logo-text {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 500px;
   color: #fff;
 }
@@ -341,17 +341,17 @@ nav {
 .main-menu {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 19px;
   list-style: none;
-  margin-left: 40px;
+  margin-left: 45px;
 }
 
 .nav-link {
   display: block;
-  padding: 8px 16px;
+  padding: 13px 21px;
   color: #eaeaea;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 32px;
   font-weight: 500;
   position: relative;
   transition: color 0.2s ease;
@@ -380,18 +380,18 @@ nav {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
 }
 
 .icon-group {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 37.5px;
 }
 
 .icon-btn {
-  width: 45px;
-  height: 45px;
+  width: 67.5px !important;
+  height: 67.5px !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -399,7 +399,7 @@ nav {
   border: none;
   color: #eaeaea;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 12px;
   transition: all 0.2s ease;
   position: relative;
 }
@@ -411,8 +411,8 @@ nav {
 }
 
 .icon-btn svg {
-  width: 30px;
-  height: 30px;
+  width: 45px !important;
+  height: 45px !important;
 }
 
 .notification-badge {
@@ -1208,7 +1208,7 @@ nav {
   top: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
-  width: 400px;
+  width: 300px;
   background: #1a1a1a;
   border: 1px solid #2a2a2a;
   border-radius: 12px;
@@ -1322,26 +1322,29 @@ nav {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
-  white-space: nowrap;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .buycrypto-menu-desc {
   font-size: 13px;
   color: #888;
   line-height: 1.4;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
-/* Trade Dropdown Menu */
+/* Trade Dropdown Menu - Independent CSS with unique classes */
 .trade-dropdown-wrapper {
   position: relative;
 }
 
-.trade-dropdown-panel {
+.trade-dd-panel {
   position: absolute;
   top: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
-  width: 450px;
+  width: 320px;
   background: #1a1a1a;
   border: 1px solid #2a2a2a;
   border-radius: 12px;
@@ -1354,7 +1357,7 @@ nav {
   z-index: 1000;
 }
 
-.trade-dropdown-panel::before {
+.trade-dd-panel::before {
   content: "";
   position: absolute;
   top: -8px;
@@ -1369,31 +1372,31 @@ nav {
   z-index: 1;
 }
 
-.trade-dropdown-wrapper:hover .trade-dropdown-panel {
+.trade-dropdown-wrapper:hover .trade-dd-panel {
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(0);
 }
 
-.trade-section {
-  padding: 16px;
+.trade-dd-section {
+  padding: 12px;
 }
 
-.trade-section:first-child {
+.trade-dd-section:first-child {
   border-bottom: 1px solid #2a2a2a;
 }
 
-.trade-section-title {
-  font-size: 13px;
-  font-weight: 600;
-  color: #666;
+.trade-dd-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 8px;
-  padding: 0 8px;
+  margin-bottom: 4px;
+  padding: 0;
 }
 
-.trade-menu-list {
+.trade-dd-menu-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1402,7 +1405,7 @@ nav {
   gap: 4px;
 }
 
-.trade-menu-item {
+.trade-dd-menu-item {
   display: flex;
   align-items: flex-start;
   gap: 16px;
@@ -1413,11 +1416,11 @@ nav {
   transition: all 0.2s ease;
 }
 
-.trade-menu-item:hover {
+.trade-dd-menu-item:hover {
   background: #252525;
 }
 
-.trade-icon {
+.trade-dd-icon {
   width: 32px;
   height: 32px;
   color: #fff;
@@ -1426,27 +1429,30 @@ nav {
   margin-top: 2px;
 }
 
-.trade-menu-content {
+.trade-dd-menu-content {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
 
-.trade-menu-title {
+.trade-dd-menu-title {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
-  white-space: nowrap;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
-.trade-menu-desc {
+.trade-dd-menu-desc {
   font-size: 13px;
   color: #888;
   line-height: 1.4;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
-.trade-arrow {
+.trade-dd-arrow {
   width: 20px;
   height: 20px;
   color: #666;
@@ -1454,7 +1460,7 @@ nav {
   margin-top: 4px;
 }
 
-.trade-menu-item:hover .trade-arrow {
+.trade-dd-menu-item:hover .trade-dd-arrow {
   color: #00c6c2;
 }
 
@@ -1503,7 +1509,8 @@ nav {
 }
 
 .futures-section {
-  padding: 16px;
+  padding: 12px;
+  padding-top: 4px;
 }
 
 .futures-section:first-child {
@@ -1511,13 +1518,13 @@ nav {
 }
 
 .futures-section-title {
-  font-size: 13px;
-  font-weight: 600;
-  color: #666;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 8px;
-  padding: 0 8px;
+  margin-bottom: 4px;
+  padding: 0;
 }
 
 .futures-menu-list {
@@ -1564,13 +1571,16 @@ nav {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
-  white-space: nowrap;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .futures-menu-desc {
   font-size: 13px;
   color: #888;
   line-height: 1.4;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .futures-arrow {
@@ -1670,13 +1680,16 @@ nav {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
-  white-space: nowrap;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .earn-menu-desc {
   font-size: 13px;
   color: #888;
   line-height: 1.4;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .earn-arrow {
@@ -1778,13 +1791,16 @@ nav {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
-  white-space: nowrap;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .square-menu-desc {
   font-size: 13px;
   color: #888;
   line-height: 1.4;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .divider {
@@ -1845,11 +1861,11 @@ nav {
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
-  width: 36px;
-  height: 36px;
+  width: 54px !important;
+  height: 54px !important;
   background: none;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .theme-toggle-btn:hover {
@@ -1858,8 +1874,8 @@ nav {
 }
 
 .theme-toggle-btn svg {
-  width: 25px;
-  height: 25px;
+  width: 37.5px !important;
+  height: 37.5px !important;
   color: #eaeaea;
   position: absolute;
   transition: all 0.3s ease;
@@ -2052,6 +2068,123 @@ body.light-mode .theme-toggle-btn .moon-icon {
 }
 
 /* Responsive for Large Screens (32 inch / 2560px+) */
+/* Standard Screen Adjustments (1920px and below) */
+@media (max-width: 1920px) {
+  /* Navbar adjustments - reduce 30% */
+  .nav-container {
+    height: 63px;
+    padding: 0 25.2px;
+  }
+
+  .nav-left {
+    gap: 5.25px;
+  }
+
+  .logo-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .logo-text {
+    font-size: 21px;
+    white-space: nowrap;
+  }
+
+  .main-menu {
+    gap: 13.3px;
+    margin-left: 31.5px;
+  }
+
+  .nav-link {
+    padding: 9.1px 14.7px;
+    font-size: 22.4px;
+    white-space: nowrap;
+  }
+
+  .nav-right {
+    gap: 16.8px;
+  }
+
+  .icon-group {
+    gap: 26.25px;
+  }
+
+  .icon-btn {
+    width: 47.25px !important;
+    height: 47.25px !important;
+    border-radius: 8.4px;
+  }
+
+  .icon-btn svg {
+    width: 31.5px !important;
+    height: 31.5px !important;
+  }
+
+  .theme-toggle-btn {
+    width: 37.8px !important;
+    height: 37.8px !important;
+    border-radius: 8.4px;
+  }
+
+  .theme-toggle-btn svg {
+    width: 26.25px !important;
+    height: 26.25px !important;
+  }
+
+  .btn-login,
+  .btn-signup {
+    font-size: 22.4px;
+    padding: 5.6px 11.2px;
+    white-space: nowrap;
+  }
+
+  /* Disable text wrapping for all navbar text */
+  nav * {
+    white-space: nowrap;
+  }
+
+  /* Dropdown adjustments for standard screens */
+  .trade-dropdown-panel,
+  .futures-dropdown-panel,
+  .earn-dropdown-panel,
+  .square-dropdown-panel {
+    width: 320px;
+  }
+
+  .trade-section,
+  .futures-section {
+    padding: 12px;
+  }
+
+  .earn-dropdown-panel,
+  .square-dropdown-panel {
+    padding: 12px;
+  }
+
+  .trade-menu-title,
+  .futures-menu-title,
+  .earn-menu-title,
+  .square-menu-title {
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.3;
+  }
+
+  .trade-menu-content,
+  .futures-menu-content,
+  .earn-menu-content,
+  .square-menu-content {
+    max-width: 100%;
+  }
+
+  .trade-menu-item,
+  .futures-menu-item,
+  .earn-menu-item,
+  .square-menu-item {
+    align-items: center;
+  }
+}
+
 @media (min-width: 2560px) {
   .nav-container {
     padding: 0 80px;
@@ -2133,100 +2266,172 @@ body.light-mode .theme-toggle-btn .moon-icon {
 
   /* Dropdown panels for large screens */
   .buycrypto-dropdown-panel {
-    width: 550px;
-    padding: 24px;
+    width: 480px;
+    padding: 18px;
+  }
+
+  .buycrypto-header {
+    padding: 24px 30px;
+    gap: 12px;
+  }
+
+  .buycrypto-label {
+    font-size: 32px;
+  }
+
+  .buycrypto-currency {
+    font-size: 28px;
+    padding: 9px 18px;
+    gap: 9px;
+  }
+
+  .currency-icon {
+    width: 32px;
+    height: 32px;
   }
 
   .buycrypto-menu-item {
-    padding: 18px;
+    padding: 21px;
+    gap: 24px;
   }
 
   .buycrypto-icon {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
   }
 
   .buycrypto-menu-title {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .buycrypto-menu-desc {
-    font-size: 16px;
+    font-size: 19.5px;
   }
 
-  .trade-dropdown-panel,
+  .buycrypto-menu-content {
+    gap: 4.5px;
+  }
+
+  .buycrypto-menu-list {
+    gap: 6px;
+  }
+
+  .buycrypto-arrow {
+    width: 30px;
+    height: 30px;
+  }
+
   .futures-dropdown-panel {
-    width: 700px;
-    padding: 32px;
+    width: 480px;
   }
 
-  .trade-menu-item,
-  .futures-menu-item {
+  .futures-section {
     padding: 18px;
   }
 
-  .trade-icon,
-  .futures-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .trade-menu-title,
-  .futures-menu-title,
-  .trade-section-title,
   .futures-section-title {
-    font-size: 20px;
+    font-size: 24px;
+    margin-bottom: 6px;
   }
 
-  .trade-menu-desc,
+  .futures-menu-item {
+    padding: 21px;
+    gap: 24px;
+  }
+
+  .futures-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .futures-menu-title {
+    font-size: 24px;
+  }
+
   .futures-menu-desc {
-    font-size: 16px;
+    font-size: 19.5px;
+  }
+
+  .futures-menu-content {
+    gap: 4.5px;
+  }
+
+  .futures-menu-list {
+    gap: 6px;
+  }
+
+  .futures-arrow {
+    width: 30px;
+    height: 30px;
   }
 
   .earn-dropdown-panel,
   .square-dropdown-panel {
-    width: 580px;
-    padding: 24px;
+    width: 480px;
+    padding: 18px;
   }
 
   .earn-menu-item,
   .square-menu-item {
-    padding: 18px;
+    padding: 21px;
+    gap: 24px;
   }
 
   .earn-icon,
   .square-icon {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
   }
 
   .earn-menu-title,
   .square-menu-title {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .square-menu-desc {
-    font-size: 16px;
+    font-size: 19.5px;
+  }
+
+  .earn-menu-content,
+  .square-menu-content {
+    gap: 4.5px;
+  }
+
+  .earn-menu-list,
+  .square-menu-list {
+    gap: 6px;
+  }
+
+  .earn-arrow,
+  .square-arrow {
+    width: 30px;
+    height: 30px;
   }
 
   .more-dropdown-panel {
-    width: 1200px;
-    padding: 60px;
-    gap: 40px;
+    width: 1800px;
+    padding: 90px;
+    gap: 60px;
   }
 
   .more-column-title {
-    font-size: 20px;
+    font-size: 30px;
+    margin-bottom: 9px;
   }
 
   .more-menu-item {
-    font-size: 20px;
-    padding: 18px 20px;
+    font-size: 30px;
+    padding: 27px 30px;
+    gap: 24px;
   }
 
   .more-icon {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .more-menu-list {
+    gap: 9px;
   }
 
   .notification-panel {
@@ -3300,5 +3505,50 @@ body.light-mode .footer-bottom a:hover {
 
   .floating-support-btn:hover {
     transform: scale(1.05) translateY(-4px);
+  }
+
+  /* Trade Dropdown - Large Screen */
+  .trade-dd-panel {
+    width: 480px;
+  }
+
+  .trade-dd-section {
+    padding: 18px;
+  }
+
+  .trade-dd-section-title {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .trade-dd-menu-item {
+    padding: 21px;
+    gap: 24px;
+  }
+
+  .trade-dd-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .trade-dd-menu-title {
+    font-size: 24px;
+  }
+
+  .trade-dd-menu-desc {
+    font-size: 19.5px;
+  }
+
+  .trade-dd-menu-content {
+    gap: 4.5px;
+  }
+
+  .trade-dd-menu-list {
+    gap: 6px;
+  }
+
+  .trade-dd-arrow {
+    width: 30px;
+    height: 30px;
   }
 }

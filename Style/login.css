@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #121212;
+  color: #eaeaea;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar */
+nav {
+  background: #0a0a0a;
+  border-bottom: 1px solid #2a2a2a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+}
+
+/* Left Section */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+}
+
+/* Logo */
+.logo-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #e5e5e5;
+  border-radius: 50%;
+}
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 30px;
+  font-weight: 500px;
+  color: #fff;
+}
+
+/* Right Section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.icon-btn {
+  width: 67.5px;
+  height: 67.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #eaeaea;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.icon-btn:hover {
+  color: #00c6c2;
+  background: #1a1a1a;
+  transform: scale(1.1);
+}
+
+.icon-btn svg {
+  width: 45px;
+  height: 45px;
+}
+
+.language-hover-wrapper {
+  position: relative;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  width: 54px;
+  height: 54px;
+  background: none;
+  border: none;
+  border-radius: 12px;
+}
+
+.theme-toggle-btn:hover {
+  background: #1a1a1a;
+  border: 1px solid #00c6c2;
+}
+
+.theme-toggle-btn svg {
+  width: 37.5px;
+  height: 37.5px;
+  color: #eaeaea;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn .sun-icon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.theme-toggle-btn .moon-icon {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+body.light-mode .theme-toggle-btn .sun-icon {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+body.light-mode .theme-toggle-btn .moon-icon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+/* Light Mode */
+body.light-mode {
+  background: #f5f5f5;
+  color: #1a1a1a;
+}
+
+body.light-mode nav {
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+body.light-mode .logo-text {
+  color: #1a1a1a;
+}
+
+body.light-mode .icon-btn {
+  color: #1a1a1a;
+}
+
+body.light-mode .icon-btn:hover {
+  background: #f0f0f0;
+  color: #00c6c2;
+}
+
+body.light-mode .theme-toggle-btn {
+  border-color: #e0e0e0;
+}
+
+body.light-mode .theme-toggle-btn:hover {
+  background: #f0f0f0;
+}
+
+body.light-mode .theme-toggle-btn svg {
+  color: #1a1a1a;
+}
+
+/* Floating Support Button */
+.floating-support-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(135deg, #00c6c2, #83aacf);
+  border: none;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 198, 194, 0.4);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.floating-support-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 198, 194, 0.6);
+}
+
+.floating-support-btn svg {
+  width: 50px;
+  height: 50px;
+  color: #ffffff;
+}
+
+/* Light mode for floating button */
+body.light-mode .floating-support-btn {
+  box-shadow: 0 4px 16px rgba(0, 198, 194, 0.3);
+}
+
+body.light-mode .floating-support-btn:hover {
+  box-shadow: 0 8px 24px rgba(0, 198, 194, 0.5);
+}

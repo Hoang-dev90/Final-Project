@@ -102,6 +102,8 @@
   transition: all 0.3s ease;
   white-space: nowrap;
   flex-shrink: 0;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .hero-btn:hover {
@@ -790,6 +792,8 @@ body.light-mode .card-footer {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .journey-btn:hover {
@@ -1951,6 +1955,8 @@ body.light-mode .faq-answer p {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .laliga-btn:hover {
