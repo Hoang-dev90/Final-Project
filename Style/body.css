@@ -1,24 +1,38 @@
+/* Video Sections Wrapper */
+.video-sections-wrapper {
+  position: relative;
+  background: #0a0a0a;
+  overflow: hidden;
+}
+
+/* Background Video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
 /* Hero Section */
 .hero-section {
   background: transparent;
   color: #fff;
   padding: 20px 20px 165px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: flex-start;
+  z-index: 1;
 }
 
-/* Hero Video Background */
+/* Remove old hero video styles */
 .hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.3;
+  display: none;
 }
 
 .hero-container {
@@ -573,6 +587,23 @@ body.light-mode .card-footer {
 
 /* Responsive */
 @media (max-width: 1024px) {
+  /* Hide video on iPad and smaller devices */
+  .background-video {
+    display: none;
+  }
+
+  .video-sections-wrapper {
+    background: #121212;
+  }
+
+  .hero-video {
+    display: none;
+  }
+
+  .hero-section {
+    background: #121212;
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -589,6 +620,15 @@ body.light-mode .card-footer {
 }
 
 @media (max-width: 768px) {
+  /* Ensure video stays hidden on mobile */
+  .background-video {
+    display: none;
+  }
+
+  .hero-video {
+    display: none;
+  }
+
   .hero-section {
     padding: 60px 20px 40px;
   }
@@ -656,6 +696,7 @@ body.light-mode .card-footer {
   position: relative;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 .journey-tabs-wrapper {
@@ -994,6 +1035,7 @@ body.light-mode .journey-btn:hover {
   padding: 100px 20px 20px;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .safe-container {
@@ -2078,5 +2120,35 @@ body.light-mode .laliga-btn:hover {
   .faq-section,
   .laliga-section {
     zoom: 1;
+  }
+
+  /* Video adjustments for large screens */
+  .background-video {
+    height: 120vh;
+  }
+
+  .hero-section {
+    overflow: visible;
+    z-index: 1;
+  }
+
+  .hero-video {
+    position: absolute;
+    align-items: center;
+    width: 100vw;
+    min-height: auto;
+    z-index: 0;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .journey-section {
+    background: transparent;
+    z-index: 1;
+  }
+
+  .hero-container {
+    position: relative;
+    z-index: 2;
   }
 }

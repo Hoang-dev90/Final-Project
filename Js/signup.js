@@ -61,25 +61,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
 // Tab switching
 const emailTab = document.getElementById("emailTab");
 const mobileTab = document.getElementById("mobileTab");
-const emailContent = document.getElementById("emailContent");
-const mobileContent = document.getElementById("mobileContent");
+const emailInput = document.getElementById("emailInput");
+const mobileInput = document.getElementById("mobileInput");
 
 emailTab.addEventListener("click", () => {
   emailTab.classList.add("active");
   mobileTab.classList.remove("active");
-  emailContent.style.display = "block";
-  mobileContent.style.display = "none";
+  emailInput.style.display = "block";
+  mobileInput.style.display = "none";
 });
 
 mobileTab.addEventListener("click", () => {
   mobileTab.classList.add("active");
   emailTab.classList.remove("active");
-  emailContent.style.display = "none";
-  mobileContent.style.display = "block";
+  emailInput.style.display = "none";
+  mobileInput.style.display = "block";
 });
 
 // Country selector
@@ -119,11 +118,79 @@ countrySearch.addEventListener("input", (e) => {
     const name = item.dataset.name.toLowerCase();
     const code = item.dataset.code.toLowerCase();
     if (name.includes(searchTerm) || code.includes(searchTerm)) {
-      item.style.display = "grid";
+      item.style.display = "flex";
     } else {
       item.style.display = "none";
     }
   });
+});
+
+// Password validation
+const passwordInput = document.getElementById("password");
+const passwordRequirements = document.getElementById("passwordRequirements");
+const passwordWrapper = document.getElementById("passwordWrapper");
+
+passwordInput.addEventListener("focus", () => {
+  passwordRequirements.style.display = "block";
+});
+
+passwordInput.addEventListener("blur", () => {
+  setTimeout(() => {
+    passwordRequirements.style.display = "none";
+  }, 200);
+});
+
+passwordInput.addEventListener("input", (e) => {
+  const value = e.target.value;
+
+  // Check length (10-128 characters)
+  const lengthValid = value.length >= 10 && value.length <= 128;
+  updateRequirement("req-length", lengthValid);
+
+  // Check uppercase
+  const uppercaseValid = /[A-Z]/.test(value);
+  updateRequirement("req-uppercase", uppercaseValid);
+
+  // Check lowercase
+  const lowercaseValid = /[a-z]/.test(value);
+  updateRequirement("req-lowercase", lowercaseValid);
+
+  // Check number
+  const numberValid = /[0-9]/.test(value);
+  updateRequirement("req-number", numberValid);
+
+  // Update border color
+  const allValid =
+    lengthValid && uppercaseValid && lowercaseValid && numberValid;
+  if (allValid) {
+    passwordWrapper.style.borderColor = "#2ebd85";
+  } else if (value.length > 0) {
+    passwordWrapper.style.borderColor = "#f6465d";
+  } else {
+    passwordWrapper.style.borderColor = "rgba(255, 255, 255, 0.1)";
+  }
+});
+
+function updateRequirement(id, valid) {
+  const element = document.getElementById(id);
+  if (valid) {
+    element.classList.add("valid");
+  } else {
+    element.classList.remove("valid");
+  }
+}
+
+// Referral code toggle
+const referralCheck = document.getElementById("referralCheck");
+const referralInput = document.getElementById("referralInput");
+
+referralCheck.addEventListener("change", (e) => {
+  if (e.target.checked) {
+    referralInput.style.display = "block";
+  } else {
+    referralInput.style.display = "none";
+    document.getElementById("referralCode").value = "";
+  }
 });
 
 // Toggle password visibility
@@ -137,14 +204,33 @@ function togglePassword(inputId) {
 }
 
 // Form submission
-document.getElementById("loginForm").addEventListener("submit", (e) => {
+document.getElementById("signupForm").addEventListener("submit", (e) => {
   e.preventDefault();
-  alert("Login successful!");
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
+
+  // Validate password requirements
+  const lengthValid = password.length >= 10 && password.length <= 128;
+  const uppercaseValid = /[A-Z]/.test(password);
+  const lowercaseValid = /[a-z]/.test(password);
+  const numberValid = /[0-9]/.test(password);
+
+  if (!lengthValid || !uppercaseValid || !lowercaseValid || !numberValid) {
+    alert("Password does not meet requirements!");
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return;
+  }
+
+  alert("Sign up successful!");
 });
 
-// Navigate to signup page
-document.getElementById("signupLink").addEventListener("click", (e) => {
+// Navigate to login page
+document.getElementById("loginLink").addEventListener("click", (e) => {
   e.preventDefault();
-  // Redirect to signup page - you can change this URL to your actual signup page
-  window.location.href = "signup.html";
+  // Redirect to login page - you can change this URL to your actual login page
+  window.location.href = "login.html";
 });

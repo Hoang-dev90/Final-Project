@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HoangCrypto© - Login</title>
+    <link rel="stylesheet" href="./Style/login.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-container">
+        <!-- Left Section -->
+        <div class="nav-left">
+          <!-- Logo -->
+          <a href="./index.html" class="logo-link">
+            <div class="logo-icon">
+              <img src="./Image/Logo 1.png" alt="Logo" />
+            </div>
+            <span class="logo-text">Hoang</span>
+          </a>
+        </div>
+
+        <!-- Right Section -->
+        <div class="nav-right">
+          <!-- Language -->
+          <div class="language-hover-wrapper">
+            <button class="icon-btn" title="Language">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12.002 2.998c.11 0 .364.065.735.466.362.39.744 1.008 1.091 1.846.223.537.423 1.145.593 1.812a23.4 23.4 0 00-4.838 0c.17-.667.37-1.275.593-1.812.347-.838.73-1.456 1.09-1.847.372-.4.625-.465.736-.465zM9.187 9.183a21 21 0 012.815-.185c.985 0 1.93.066 2.815.185.12.885.185 1.83.185 2.815 0 .985-.066 1.93-.185 2.815-.933.125-1.873.187-2.815.185-.985 0-1.93-.066-2.815-.185a21 21 0 01-.185-2.815c0-.985.066-1.93.185-2.815zm-2.06 5.234a23.4 23.4 0 010-4.838c-.668.17-1.277.37-1.813.593-.838.347-1.456.73-1.847 1.09-.4.372-.465.625-.465.736 0 .111.065.364.465.735.391.362 1.01.744 1.847 1.091.59.24 1.196.439 1.813.593zm2.456 2.457c1.609.168 3.23.168 4.838 0-.17.667-.37 1.276-.593 1.812-.347.838-.729 1.456-1.09 1.847-.372.4-.625.465-.736.465-.11 0-.364-.065-.735-.465-.362-.39-.744-1.009-1.09-1.847a13.4 13.4 0 01-.594-1.812zm7.294-2.457c.167-1.608.167-3.23 0-4.838.618.155 1.224.353 1.813.593.838.347 1.456.73 1.847 1.09.4.372.465.625.465.736 0 .111-.065.364-.465.735-.39.362-1.009.744-1.847 1.091-.537.223-1.146.423-1.813.593zm-.328-6.966c-.2-.994-.492-1.967-.873-2.907-.367-.884-.808-1.665-1.319-2.267a10.02 10.02 0 017.366 7.366c-.602-.51-1.383-.952-2.267-1.319-.94-.38-1.913-.673-2.907-.873zm0 9.094a16.3 16.3 0 01-.873 2.907c-.367.884-.808 1.665-1.319 2.267a10.02 10.02 0 007.366-7.366c-.602.51-1.383.952-2.267 1.32-.85.352-1.832.65-2.907.872zM9.647 21.72c-.51-.602-.952-1.383-1.319-2.267-.38-.94-.673-1.913-.873-2.907-.994-.2-1.967-.492-2.907-.873-.884-.367-1.666-.808-2.267-1.319a10.02 10.02 0 007.366 7.366zM7.455 7.451c.223-1.075.52-2.056.873-2.907.367-.884.808-1.665 1.32-2.267A10.02 10.02 0 002.28 9.643c.601-.51 1.383-.952 2.267-1.319a16.3 16.3 0 012.907-.873z"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Language Panel -->
+            <div class="language-hover-panel">
+              <div class="language-panel-tabs">
+                <button class="language-tab active" data-tab="language">
+                  Language
+                </button>
+                <button class="language-tab" data-tab="currency">
+                  Currency
+                </button>
+              </div>
+              <div class="language-panel-content">
+                <div
+                  class="language-tab-content active"
+                  data-content="language"
+                >
+                  <div class="language-option-item active">
+                    <span>English</span>
+                  </div>
+                  <div class="language-option-item">
+                    <span>Tiếng Việt</span>
+                  </div>
+                </div>
+                <div class="language-tab-content" data-content="currency">
+                  <div class="language-option-item active">
+                    <span>USD</span>
+                  </div>
+                  <div class="language-option-item">
+                    <span>VND</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn" id="themeToggle">
+            <svg
+              class="sun-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+            <svg
+              class="moon-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Floating Support Button -->
+    <button class="floating-support-btn" title="Support">
+      <svg viewBox="0 0 28 29" class="chat-icon">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M24.5023 20.4105V14.5771C24.5023 14.2147 24.4839 13.8566 24.4481 13.5036C24.4449 13.4725 24.4416 13.4415 24.4382 13.4105C23.8579 8.16054 19.4069 4.07715 14.0023 4.07715C8.2033 4.07715 3.50229 8.77816 3.50229 14.5771V20.4105H9.33562V13.4105H6.50814C7.06932 9.77621 10.2109 6.99381 14.0023 6.99381C17.7937 6.99381 20.9353 9.77621 21.4964 13.4105H18.669V20.4105H19.7178C18.6728 21.4345 17.3539 22.1799 15.8812 22.5266C15.4563 21.9507 14.7729 21.5771 14.0023 21.5771C12.7136 21.5771 11.669 22.6218 11.669 23.9105C11.669 25.1991 12.7136 26.2438 14.0023 26.2438C14.9526 26.2438 15.7702 25.6757 16.134 24.8606C18.8766 24.295 21.2285 22.6599 22.7342 20.4105H24.5023Z"
+          fill="#202630"
+        ></path>
+      </svg>
+    </button>
+    <!-- Login Form -->
+    <div class="container">
+      <div class="left-section">
+        <h2 class="login-title">Log In</h2>
+
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+          "
+        >
+          <div
+            class="tabs"
+            style="margin-bottom: 0; border-bottom: none; flex: 1"
+          >
+            <button class="tab active" id="emailTab">Email</button>
+            <button class="tab" id="mobileTab">Mobile</button>
+          </div>
+          <div class="qr-icon" style="position: static; margin-left: 20px">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+            </svg>
+          </div>
+        </div>
+
+        <div
+          style="
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 30px;
+          "
+        ></div>
+
+        <form id="loginForm">
+          <!-- Email Tab -->
+          <div id="emailContent">
+            <div class="form-group">
+              <div class="input-wrapper">
+                <svg
+                  class="sc-aXZVg ktFCMi mx-icon input-prefix-icon"
+                  focusable="false"
+                  width="1em"
+                  height="1em"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  data-icon="MailFilled"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.24503 5.54002L12 10.8609L21.755 5.54002C21.4152 4.92022 20.7567 4.5 20 4.5H4C3.24332 4.5 2.58478 4.92022 2.24503 5.54002Z"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M22 7.68454L12.9577 12.6167C12.3607 12.9423 11.6393 12.9423 11.0423 12.6167L2 7.68454V17.5C2 18.6046 2.89543 19.5 4 19.5H20C21.1046 19.5 22 18.6046 22 17.5V7.68454Z"
+                  ></path>
+                </svg>
+                <input type="email" placeholder="Email/Sub-Account" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-wrapper">
+                <svg
+                  class="sc-aXZVg ktFCMi mx-icon input-prefix-icon"
+                  focusable="false"
+                  width="1em"
+                  height="1em"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  data-icon="PassWordIcon"
+                >
+                  <path
+                    d="M11.8922 6.37672H10.1466V5.725C10.1466 4.63103 9.84397 2.79224 7.81897 2.79224C5.71638 2.79224 5.49138 4.84052 5.49138 5.725V6.37672H3.74569V5.725C3.74569 2.85431 5.34397 1 7.81897 1C10.294 1 11.8922 2.85431 11.8922 5.725V6.37672ZM8.98276 10.8276C8.98276 10.1681 8.45517 9.63276 7.81897 9.63276C7.18276 9.63276 6.65517 10.1681 6.65517 10.8276C6.65517 11.2776 6.88793 11.65 7.23707 11.8517V13.2095C7.23707 13.5353 7.50086 13.8147 7.81897 13.8147C8.13707 13.8147 8.40086 13.5431 8.40086 13.2095V11.8595C8.75 11.6578 8.98276 11.2776 8.98276 10.8276ZM13.6379 8.75862V14.2078C13.6379 15.1931 12.8543 16 11.8922 16H3.74569C2.78362 16 2 15.1931 2 14.2078L2 8.75862C2 7.77328 2.78362 6.96638 3.74569 6.96638H11.8922C12.8543 6.96638 13.6379 7.77328 13.6379 8.75862Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <input
+                  type="password"
+                  id="emailPassword"
+                  placeholder="Password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="toggle-password"
+                  onclick="togglePassword('emailPassword')"
+                >
+                  <svg
+                    viewBox="64 64 896 896"
+                    focusable="false"
+                    data-icon="eye-invisible"
+                    width="1em"
+                    height="1em"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M942.2 486.2Q889.47 375.11 816.7 305l-50.88 50.88C807.31 395.53 843.45 447.4 874.7 512 791.5 684.2 673.4 766 512 766q-72.67 0-133.87-22.38L323 798.75Q408 838 512 838q288.3 0 430.2-300.3a60.29 60.29 0 000-51.5zm-63.57-320.64L836 122.88a8 8 0 00-11.32 0L715.31 232.2Q624.86 186 512 186q-288.3 0-430.2 300.3a60.3 60.3 0 000 51.5q56.69 119.4 136.5 191.41L112.48 835a8 8 0 000 11.31L155.17 889a8 8 0 0011.31 0l712.15-712.12a8 8 0 000-11.32zM149.3 512C232.6 339.8 350.7 258 512 258c54.54 0 104.13 9.36 149.12 28.39l-70.3 70.3a176 176 0 00-238.13 238.13l-83.42 83.42C223.1 637.49 183.3 582.28 149.3 512zm246.7 0a112.11 112.11 0 01146.2-106.69L401.31 546.2A112 112 0 01396 512z"
+                    ></path>
+                    <path
+                      d="M508 624c-3.46 0-6.87-.16-10.25-.47l-52.82 52.82a176.09 176.09 0 00227.42-227.42l-52.82 52.82c.31 3.38.47 6.79.47 10.25a111.94 111.94 0 01-112 112z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Tab -->
+          <div id="mobileContent" style="display: none">
+            <div class="form-group">
+              <div style="display: flex; gap: 10px; position: relative">
+                <div class="country-select" id="countrySelect">
+                  <img
+                    src="https://flagcdn.com/w20/in.png"
+                    alt="India"
+                    id="selectedFlag"
+                    style="width: 20px; margin-right: 8px"
+                  />
+                  <span id="selectedCode">+91</span>
+                  <span style="margin-left: 8px">▼</span>
+                </div>
+                <div class="input-wrapper" style="flex: 1">
+                  <input type="tel" placeholder="Mobile Number" />
+                </div>
+                <div
+                  class="country-dropdown"
+                  id="countryDropdown"
+                  style="display: none"
+                >
+                  <div style="padding: 10px">
+                    <div
+                      class="input-wrapper"
+                      style="
+                        background: #2b3139;
+                        border: 1px solid rgba(255, 255, 255, 0.15);
+                      "
+                    >
+                      <span class="input-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="11" cy="11" r="8"></circle>
+                          <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                      </span>
+                      <input
+                        type="text"
+                        id="countrySearch"
+                        placeholder="Search"
+                        style="background: transparent"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      padding: 10px 15px;
+                      font-size: 12px;
+                      color: #848e9c;
+                      background: rgba(255, 255, 255, 0.02);
+                    "
+                  >
+                    Favorite
+                  </div>
+                  <div class="country-list" id="countryList">
+                    <div
+                      class="country-item"
+                      data-code="+91"
+                      data-flag="in"
+                      data-name="India"
+                    >
+                      <img src="https://flagcdn.com/w20/in.png" alt="India" />
+                      <span class="country-code">+91</span>
+                      <span class="country-name">India</span>
+                    </div>
+                    <div
+                      class="country-item"
+                      data-code="+81"
+                      data-flag="jp"
+                      data-name="Japan"
+                    >
+                      <img src="https://flagcdn.com/w20/jp.png" alt="Japan" />
+                      <span class="country-code">+81</span>
+                      <span class="country-name">Japan</span>
+                    </div>
+                    <div
+                      class="country-item"
+                      data-code="+7"
+                      data-flag="ru"
+                      data-name="Russian Federation"
+                    >
+                      <img src="https://flagcdn.com/w20/ru.png" alt="Russia" />
+                      <span class="country-code">+7</span>
+                      <span class="country-name">Russian Federation</span>
+                    </div>
+                    <div
+                      class="country-item"
+                      data-code="+82"
+                      data-flag="kr"
+                      data-name="Republic of Korea"
+                    >
+                      <img src="https://flagcdn.com/w20/kr.png" alt="Korea" />
+                      <span class="country-code">+82</span>
+                      <span class="country-name">Republic of Korea</span>
+                    </div>
+                    <div
+                      class="country-item"
+                      data-code="+90"
+                      data-flag="tr"
+                      data-name="Türkiye(Turkey)"
+                    >
+                      <img src="https://flagcdn.com/w20/tr.png" alt="Turkey" />
+                      <span class="country-code">+90</span>
+                      <span class="country-name">Türkiye(Turkey)</span>
+                    </div>
+                    <div
+                      class="country-item"
+                      data-code="+380"
+                      data-flag="ua"
+                      data-name="Ukraine"
+                    >
+                      <img src="https://flagcdn.com/w20/ua.png" alt="Ukraine" />
+                      <span class="country-code">+380</span>
+                      <span class="country-name">Ukraine</span>
+                    </div>
+                    <div
+                      class="country-item"
+                      data-code="+84"
+                      data-flag="vn"
+                      data-name="Vietnam"
+                    >
+                      <img src="https://flagcdn.com/w20/vn.png" alt="Vietnam" />
+                      <span class="country-code">+84</span>
+                      <span class="country-name">Vietnam</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-wrapper">
+                <svg
+                  class="sc-aXZVg ktFCMi mx-icon input-prefix-icon"
+                  focusable="false"
+                  width="1em"
+                  height="1em"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  data-icon="PassWordIcon"
+                >
+                  <path
+                    d="M11.8922 6.37672H10.1466V5.725C10.1466 4.63103 9.84397 2.79224 7.81897 2.79224C5.71638 2.79224 5.49138 4.84052 5.49138 5.725V6.37672H3.74569V5.725C3.74569 2.85431 5.34397 1 7.81897 1C10.294 1 11.8922 2.85431 11.8922 5.725V6.37672ZM8.98276 10.8276C8.98276 10.1681 8.45517 9.63276 7.81897 9.63276C7.18276 9.63276 6.65517 10.1681 6.65517 10.8276C6.65517 11.2776 6.88793 11.65 7.23707 11.8517V13.2095C7.23707 13.5353 7.50086 13.8147 7.81897 13.8147C8.13707 13.8147 8.40086 13.5431 8.40086 13.2095V11.8595C8.75 11.6578 8.98276 11.2776 8.98276 10.8276ZM13.6379 8.75862V14.2078C13.6379 15.1931 12.8543 16 11.8922 16H3.74569C2.78362 16 2 15.1931 2 14.2078L2 8.75862C2 7.77328 2.78362 6.96638 3.74569 6.96638H11.8922C12.8543 6.96638 13.6379 7.77328 13.6379 8.75862Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <input
+                  type="password"
+                  id="mobilePassword"
+                  placeholder="Password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="toggle-password"
+                  onclick="togglePassword('mobilePassword')"
+                >
+                  <svg
+                    viewBox="64 64 896 896"
+                    focusable="false"
+                    data-icon="eye-invisible"
+                    width="1em"
+                    height="1em"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M942.2 486.2Q889.47 375.11 816.7 305l-50.88 50.88C807.31 395.53 843.45 447.4 874.7 512 791.5 684.2 673.4 766 512 766q-72.67 0-133.87-22.38L323 798.75Q408 838 512 838q288.3 0 430.2-300.3a60.29 60.29 0 000-51.5zm-63.57-320.64L836 122.88a8 8 0 00-11.32 0L715.31 232.2Q624.86 186 512 186q-288.3 0-430.2 300.3a60.3 60.3 0 000 51.5q56.69 119.4 136.5 191.41L112.48 835a8 8 0 000 11.31L155.17 889a8 8 0 0011.31 0l712.15-712.12a8 8 0 000-11.32zM149.3 512C232.6 339.8 350.7 258 512 258c54.54 0 104.13 9.36 149.12 28.39l-70.3 70.3a176 176 0 00-238.13 238.13l-83.42 83.42C223.1 637.49 183.3 582.28 149.3 512zm246.7 0a112.11 112.11 0 01146.2-106.69L401.31 546.2A112 112 0 01396 512z"
+                    ></path>
+                    <path
+                      d="M508 624c-3.46 0-6.87-.16-10.25-.47l-52.82 52.82a176.09 176.09 0 00227.42-227.42l-52.82 52.82c.31 3.38.47 6.79.47 10.25a111.94 111.94 0 01-112 112z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="rememberMe" />
+            <label for="rememberMe" class="checkbox-label">
+              Stay logged in on this device for 5 days
+            </label>
+          </div>
+
+          <button type="submit" class="next-btn">Log In</button>
+        </form>
+
+        <div class="links">
+          <span class="signup"
+            >No account yet?
+            <a href="./signup.html" id="signupLink">Sign up now!</a></span
+          >
+          <a href="#">Forgot Password?</a>
+        </div>
+
+        <div class="divider">or log in with</div>
+
+        <div class="social-buttons">
+          <button class="social-btn">
+            <svg
+              class="sc-aXZVg ktFCMi mx-icon ThirdPartyLogin_itemIcon__xyvJl"
+              focusable="false"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              aria-hidden="true"
+              viewBox="0 0 1024 1024"
+              data-icon="Icongoogle1"
+            >
+              <path
+                d="M977.454545 565.434182a539.927273 539.927273 0 0 0-8.192-94.114909h-447.767272v178.269091h256.465454A214.946909 214.946909 0 0 1 683.101091 790.341818v115.805091h153.041454C925.789091 825.530182 977.454545 706.373818 977.454545 565.434182z"
+                fill="#4285F4"
+              ></path>
+              <path
+                d="M521.588364 1018.042182c128.093091 0 235.985455-40.96 314.647272-111.802182L683.287273 790.434909c-42.635636 28.113455-97.373091 44.218182-161.605818 44.218182a281.879273 281.879273 0 0 1-163.560728-52.875636A284.858182 284.858182 0 0 1 255.069091 643.444364H97.28v119.342545c80.709818 156.392727 244.829091 255.255273 424.308364 255.255273z"
+                fill="#34A853"
+              ></path>
+              <path
+                d="M254.882909 643.444364a271.080727 271.080727 0 0 1 0-177.245091V346.949818H97.093818a452.701091 452.701091 0 0 0 0 415.837091l157.789091-119.342545z"
+                fill="#FBBC04"
+              ></path>
+              <path
+                d="M521.588364 274.990545a261.399273 261.399273 0 0 1 182.085818 69.53891l135.540363-132.189091A462.661818 462.661818 0 0 0 521.588364 91.694545C342.109091 91.694545 177.803636 190.370909 97.28 346.949818L255.069091 466.199273a284.858182 284.858182 0 0 1 102.958545-138.24 281.879273 281.879273 0 0 1 163.560728-52.968728z"
+                fill="#EA4335"
+              ></path>
+            </svg>
+          </button>
+          <button class="social-btn">
+            <svg
+              class="sc-aXZVg ktFCMi mx-icon ThirdPartyLogin_itemIcon__xyvJl ThirdPartyLogin_itemAppleIcon__EdheM"
+              focusable="false"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              aria-hidden="true"
+              viewBox="0 0 1024 1024"
+              data-icon="AppleFilled"
+            >
+              <path
+                d="M781.152 517.547c1.35 140.502 129.231 187.259 130.72 187.907-1.162 3.216-20.492 66.642-67.481 132.167-40.604 56.626-82.659 112.933-149.023 114.093-65.292 1.165-86.199-36.882-160.801-36.882-74.562 0-97.891 35.723-159.597 38.048-63.984 2.329-112.789-61.102-153.729-117.497-83.732-115.399-147.627-326.037-61.751-468.213 42.612-70.649 118.847-115.307 201.509-116.514 62.918-1.073 122.337 40.467 160.71 40.467 38.513 0 110.649-49.921 186.511-42.612 31.716 1.26 120.898 12.201 178.13 92.025-4.563 2.839-106.41 59.285-105.201 177.010v0zM514.026 237.942c-7.358-53.414 20.211-108.929 51.695-143.808 35.161-39.259 94.487-68.457 143.481-70.32 6.287 54.393-16.716 109.020-50.667 148.37-34.043 39.216-89.836 69.81-144.507 65.758v0zM514.026 237.942z"
+              ></path>
+            </svg>
+          </button>
+          <button class="social-btn">
+            <svg
+              class="sc-aXZVg ktFCMi mx-icon ThirdPartyLogin_itemIcon__xyvJl ThirdPartyLogin_itemTelegramIcon__8dUD1"
+              focusable="false"
+              width="1em"
+              height="1em"
+              fill="currentColor"
+              aria-hidden="true"
+              viewBox="0 0 1024 1024"
+              data-icon="TelegramFilled"
+            >
+              <path
+                d="M417.28 795.733l11.947-180.48L756.907 320c14.506-13.227-2.987-19.627-22.187-8.107L330.24 567.467 155.307 512c-37.547-10.667-37.974-36.693 8.533-55.467l681.387-262.826c31.146-14.08 61.013 7.68 49.066 55.466L778.24 795.733c-8.107 38.827-31.573 48.214-64 30.294L537.6 695.467l-84.907 82.346c-9.813 9.814-17.92 17.92-35.413 17.92z"
+                fill="#24A1DE"
+              ></path>
+            </svg>
+          </button>
+          <button class="wallet-btn">
+            <div class="wallet-icon">
+              <img src="./Image/Wallet1.png" alt="wallet1" />
+              <img src="./Image/Wallet 2.png" alt="Wallet2" />
+            </div>
+            <span class="wallet-text">Wallet</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="bonus-image">
+          <img src="./Image/web-dark.713ace4c9ab5.webp" alt="Bonus" />
+        </div>
+        <div class="bonus-title">Sign Up to Claim</div>
+        <div class="bonus-amount">100 USD Bonus</div>
+        <div class="timer-badge">Limited-time 47:55:01</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="login-footer">
+      <div class="footer-content">
+        <span class="footer-copyright">©2025 HoangCrypto©</span>
+        <span class="footer-divider">|</span>
+        <a href="#" class="footer-link">Privacy</a>
+        <span class="footer-divider">·</span>
+        <a href="#" class="footer-link">Terms</a>
+        <span class="footer-divider">·</span>
+        <a href="#" class="footer-link">Risk</a>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./Js/login.js"></script>
+  </body>
+</html>
