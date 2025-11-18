@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HoangCrypto© - Login</title>
-    <link rel="stylesheet" href="./Style/login.css" />
+    <link rel="stylesheet" href="./Style/ResetPassword.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -116,6 +116,203 @@
         ></path>
       </svg>
     </button>
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Step 1: Reset Password Form -->
+      <div class="reset-container" id="resetForm">
+        <h2 class="title">Reset Login Password</h2>
+
+        <div class="tabs">
+          <button class="tab active" id="emailTab">Email</button>
+          <button class="tab" id="mobileTab">Mobile</button>
+        </div>
+
+        <!-- Email Content -->
+        <div id="emailContent">
+          <label class="form-label">Email</label>
+          <div class="input-wrapper">
+            <input
+              type="email"
+              class="input-field"
+              id="emailInput"
+              placeholder="Email"
+            />
+            <span class="error-icon" id="errorIcon" style="display: none"
+              >⚠</span
+            >
+          </div>
+        </div>
+
+        <!-- Mobile Content -->
+        <div id="mobileContent">
+          <label class="form-label">Phone Number</label>
+          <div class="phone-wrapper">
+            <div class="country-select" id="countrySelect">
+              <img
+                src="https://flagcdn.com/w20/in.png"
+                alt="India"
+                id="selectedFlag"
+                style="width: 20px; margin-right: 8px"
+              />
+              <span id="selectedCode">+91</span>
+              <span style="margin-left: 8px">▼</span>
+            </div>
+            <div class="input-wrapper" style="flex: 1; margin-bottom: 0">
+              <input
+                type="tel"
+                class="input-field"
+                id="mobileInput"
+                placeholder="Mobile Number"
+              />
+            </div>
+            <div
+              class="country-dropdown"
+              id="countryDropdown"
+              style="display: none"
+            >
+              <div style="padding: 10px">
+                <div
+                  style="
+                    background: #2b3139;
+                    border: 1px solid rgba(255, 255, 255, 0.15);
+                    border-radius: 8px;
+                    padding: 12px 16px;
+                    display: flex;
+                    align-items: center;
+                  "
+                >
+                  <span style="color: #848e9c; margin-right: 12px">🔍</span>
+                  <input
+                    type="text"
+                    id="countrySearch"
+                    placeholder="Search"
+                    style="
+                      background: transparent;
+                      border: none;
+                      color: #fff;
+                      font-size: 14px;
+                      width: 100%;
+                      outline: none;
+                    "
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  padding: 10px 15px;
+                  font-size: 12px;
+                  color: #848e9c;
+                  background: rgba(255, 255, 255, 0.02);
+                "
+              >
+                Favorite
+              </div>
+              <div class="country-list" id="countryList">
+                <div
+                  class="country-item"
+                  data-code="+91"
+                  data-flag="in"
+                  data-name="India"
+                >
+                  <img src="https://flagcdn.com/w20/in.png" alt="India" />
+                  <span style="color: #848e9c; font-size: 14px">+91</span>
+                  <span style="color: #eaecef; font-size: 14px">India</span>
+                </div>
+                <div
+                  class="country-item"
+                  data-code="+81"
+                  data-flag="jp"
+                  data-name="Japan"
+                >
+                  <img src="https://flagcdn.com/w20/jp.png" alt="Japan" />
+                  <span style="color: #848e9c; font-size: 14px">+81</span>
+                  <span style="color: #eaecef; font-size: 14px">Japan</span>
+                </div>
+                <div
+                  class="country-item"
+                  data-code="+7"
+                  data-flag="ru"
+                  data-name="Russian Federation"
+                >
+                  <img src="https://flagcdn.com/w20/ru.png" alt="Russia" />
+                  <span style="color: #848e9c; font-size: 14px">+7</span>
+                  <span style="color: #eaecef; font-size: 14px"
+                    >Russian Federation</span
+                  >
+                </div>
+                <div
+                  class="country-item"
+                  data-code="+82"
+                  data-flag="kr"
+                  data-name="Republic of Korea"
+                >
+                  <img src="https://flagcdn.com/w20/kr.png" alt="Korea" />
+                  <span style="color: #848e9c; font-size: 14px">+82</span>
+                  <span style="color: #eaecef; font-size: 14px"
+                    >Republic of Korea</span
+                  >
+                </div>
+                <div
+                  class="country-item"
+                  data-code="+90"
+                  data-flag="tr"
+                  data-name="Türkiye(Turkey)"
+                >
+                  <img src="https://flagcdn.com/w20/tr.png" alt="Turkey" />
+                  <span style="color: #848e9c; font-size: 14px">+90</span>
+                  <span style="color: #eaecef; font-size: 14px"
+                    >Türkiye(Turkey)</span
+                  >
+                </div>
+                <div
+                  class="country-item"
+                  data-code="+380"
+                  data-flag="ua"
+                  data-name="Ukraine"
+                >
+                  <img src="https://flagcdn.com/w20/ua.png" alt="Ukraine" />
+                  <span style="color: #848e9c; font-size: 14px">+380</span>
+                  <span style="color: #eaecef; font-size: 14px">Ukraine</span>
+                </div>
+                <div
+                  class="country-item"
+                  data-code="+84"
+                  data-flag="vn"
+                  data-name="Vietnam"
+                >
+                  <img src="https://flagcdn.com/w20/vn.png" alt="Vietnam" />
+                  <span style="color: #848e9c; font-size: 14px">+84</span>
+                  <span style="color: #eaecef; font-size: 14px">Vietnam</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="next-btn" id="nextBtn">Next</button>
+      </div>
+
+      <!-- Step 2: Security Code -->
+      <div class="verify-container" id="verifyForm">
+        <h2 class="verify-title">Enter your security code</h2>
+        <p class="verify-subtitle" id="verifySubtitle">
+          We texted your code to +1 234 567 890
+        </p>
+
+        <div class="code-inputs">
+          <input type="text" class="code-input" maxlength="1" id="code1" />
+          <input type="text" class="code-input" maxlength="1" id="code2" />
+          <input type="text" class="code-input" maxlength="1" id="code3" />
+          <input type="text" class="code-input" maxlength="1" id="code4" />
+        </div>
+
+        <button class="continue-btn" id="continueBtn">Continue</button>
+
+        <div class="resend-link">
+          Didn't receive code? <a href="#">Resend</a>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="login-footer">
@@ -131,6 +328,8 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="./Js/login.js"></script>
+    <script src="./Js/ResetPassword.js"></script>
+    <script src="./Js/dataStorage.js"></script>
+    <script src="./Js/storageIntegration.js"></script>
   </body>
 </html>

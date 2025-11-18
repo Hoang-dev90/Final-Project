@@ -30,6 +30,11 @@ body::before {
   pointer-events: none;
 }
 
+/* Hide background image in light mode */
+body.light-mode::before {
+  display: none;
+}
+
 /* Navbar */
 nav {
   background: #0a0a0a;
@@ -395,6 +400,11 @@ body.light-mode .language-option-item:hover {
 body.light-mode .language-option-item.active {
   background: rgba(0, 198, 194, 0.2);
   color: #00c6c2;
+}
+
+body.light-mode .left-section {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Login Footer */
@@ -906,5 +916,74 @@ input::placeholder {
 
   .right-section {
     display: none;
+  }
+}
+
+/* Large Screen Adjustments (32 inch and above) */
+@media (min-width: 2560px) {
+  .container {
+    max-width: 1400px;
+    min-height: calc(100vh - 1250px);
+    padding: 30px;
+    margin-top: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .left-section {
+    padding: 30px;
+    width: 600px;
+  }
+
+  .login-title {
+    font-size: 38px;
+    margin-bottom: 30px;
+  }
+
+  .tab {
+    font-size: 30px;
+    padding: 0 0 25px 0;
+  }
+
+  .tabs {
+    margin-bottom: 40px;
+  }
+
+  input {
+    font-size: 20px;
+  }
+
+  .input-wrapper {
+    margin: 50px 0;
+  }
+  .checkbox-label {
+    font-size: 20px;
+  }
+  .next-btn {
+    font-size: 24px;
+    padding: 14px;
+    margin-bottom: 40px;
+  }
+  .links {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .divider {
+    font-size: 20px;
+    margin: 30px 0;
+  }
+  .bonus-title {
+    font-size: 42px;
+    margin-bottom: 15px;
+  }
+  .bonus-amount {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  .timer-badge {
+    font-size: 20px;
   }
 }

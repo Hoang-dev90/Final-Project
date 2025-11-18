@@ -203,30 +203,189 @@ function togglePassword(inputId) {
   }
 }
 
-// Form submission
+// Form validation and submission
 document.getElementById("signupForm").addEventListener("submit", (e) => {
   e.preventDefault();
-  const password = document.getElementById("password").value;
-  const confirmPassword = document.getElementById("confirmPassword").value;
 
-  // Validate password requirements
-  const lengthValid = password.length >= 10 && password.length <= 128;
-  const uppercaseValid = /[A-Z]/.test(password);
-  const lowercaseValid = /[a-z]/.test(password);
-  const numberValid = /[0-9]/.test(password);
+  // Get form data
+  const formData = {
+    email: document.getElementById("email")?.value || "",
+    phone: document.getElementById("phone")?.value || "",
+    password: document.getElementById("password")?.value || "",
+    confirmPassword: document.getElementById("confirmPassword")?.value || "",
+    agreedToTerms: document.getElementById("terms")?.checked || false,
+    referralCode: document.getElementById("referralCode")?.value || "",
+  };
 
-  if (!lengthValid || !uppercaseValid || !lowercaseValid || !numberValid) {
-    alert("Password does not meet requirements!");
+  // Show loading state
+  const submitBtn = document.querySelector(".continue-btn");
+  const originalBtnText = submitBtn.textContent;
+  submitBtn.textContent = "Validating...";
+  submitBtn.disabled = true;
+  submitBtn.style.opacity = "0.7";
+
+  // Comprehensive form validation
+  const validationResult = validateSignupForm(formData);
+
+  if (!validationResult.isValid) {
+    // Restore button state on validation error
+    submitBtn.textContent = originalBtnText;
+    submitBtn.disabled = false;
+    submitBtn.style.opacity = "1";
+
+    alert(validationResult.message);
     return;
   }
 
-  if (password !== confirmPassword) {
-    alert("Passwords do not match!");
-    return;
-  }
+  // If validation passes, save user data and redirect to login
+  try {
+    // Save user registration data (excluding password for security)
+    const userData = {
+      email: formData.email,
+      phone: formData.phone,
+      referralCode: formData.referralCode,
+      registrationDate: new Date().toISOString(),
+      status: "pending_verification",
+    };
 
-  alert("Sign up successful!");
+    // Save to localStorage using our data storage system
+    if (typeof dataStorage !== "undefined") {
+      dataStorage.saveData("user_registration", userData);
+      dataStorage.saveSignupProgress(userData);
+    } else {
+      localStorage.setItem(
+        "hoangcrypto_user_registration",
+        JSON.stringify(userData)
+      );
+    }
+
+    // Update button state to show creating account
+    submitBtn.textContent = "Creating Account...";
+
+    // Simulate processing time and show success message
+    setTimeout(() => {
+      alert(
+        "🎉 Sign up successful! You will now be redirected to the login page."
+      );
+
+      // Add redirect with a small delay for user to see the success message
+      setTimeout(() => {
+        window.location.href = "login.html";
+      }, 1000);
+    }, 1500);
+  } catch (error) {
+    console.error("Error saving user data:", error);
+
+    // Restore button state
+    submitBtn.textContent = originalBtnText;
+    submitBtn.disabled = false;
+    submitBtn.style.opacity = "1";
+
+    alert(
+      "Sign up successful, but there was an issue saving your data. Redirecting to login..."
+    );
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 2000);
+  }
 });
+
+// Comprehensive form validation function
+function validateSignupForm(formData) {
+  // Check if email or phone is provided
+  if (!formData.email && !formData.phone) {
+    return {
+      isValid: false,
+      message: "Please provide either an email address or phone number.",
+    };
+  }
+
+  // Email validation
+  if (formData.email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      return {
+        isValid: false,
+        message: "Please enter a valid email address.",
+      };
+    }
+  }
+
+  // Phone validation
+  if (formData.phone) {
+    const phoneRegex = /^\+?[\d\s\-\(\)]{10,}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      return {
+        isValid: false,
+        message: "Please enter a valid phone number.",
+      };
+    }
+  }
+
+  // Password validation
+  if (!formData.password) {
+    return {
+      isValid: false,
+      message: "Password is required.",
+    };
+  }
+
+  const lengthValid =
+    formData.password.length >= 10 && formData.password.length <= 128;
+  const uppercaseValid = /[A-Z]/.test(formData.password);
+  const lowercaseValid = /[a-z]/.test(formData.password);
+  const numberValid = /[0-9]/.test(formData.password);
+
+  if (!lengthValid) {
+    return {
+      isValid: false,
+      message: "Password must be between 10-128 characters long.",
+    };
+  }
+
+  if (!uppercaseValid) {
+    return {
+      isValid: false,
+      message: "Password must contain at least one uppercase letter.",
+    };
+  }
+
+  if (!lowercaseValid) {
+    return {
+      isValid: false,
+      message: "Password must contain at least one lowercase letter.",
+    };
+  }
+
+  if (!numberValid) {
+    return {
+      isValid: false,
+      message: "Password must contain at least one number.",
+    };
+  }
+
+  // Confirm password validation
+  if (formData.password !== formData.confirmPassword) {
+    return {
+      isValid: false,
+      message: "Passwords do not match!",
+    };
+  }
+
+  // Terms and conditions validation
+  if (!formData.agreedToTerms) {
+    return {
+      isValid: false,
+      message: "Please agree to the Terms and Conditions and Privacy Policy.",
+    };
+  }
+
+  // All validations passed
+  return {
+    isValid: true,
+    message: "All validations passed successfully.",
+  };
+}
 
 // Navigate to login page
 document.getElementById("loginLink").addEventListener("click", (e) => {
