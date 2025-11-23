@@ -1220,7 +1220,7 @@ nav {
   top: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
+  width: 380px;
   background: #1a1a1a;
   border: 1px solid #2a2a2a;
   border-radius: 12px;
@@ -1297,6 +1297,13 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.buycrypto-menu-list li {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .buycrypto-menu-item {
@@ -1308,6 +1315,8 @@ nav {
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .buycrypto-menu-item:hover {
@@ -1328,6 +1337,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
 }
 
 .buycrypto-menu-title {
@@ -1336,6 +1346,8 @@ nav {
   color: #fff;
   white-space: normal;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .buycrypto-menu-desc {
@@ -1344,6 +1356,8 @@ nav {
   line-height: 1.4;
   white-space: normal;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* Trade Dropdown Menu - Independent CSS with unique classes */
@@ -1356,7 +1370,7 @@ nav {
   top: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
-  width: 320px;
+  width: 400px;
   background: #1a1a1a;
   border: 1px solid #2a2a2a;
   border-radius: 12px;
@@ -1415,6 +1429,13 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.trade-dd-menu-list li {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .trade-dd-menu-item {
@@ -1426,6 +1447,8 @@ nav {
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .trade-dd-menu-item:hover {
@@ -1446,6 +1469,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  min-width: 0;
 }
 
 .trade-dd-menu-title {
@@ -1454,6 +1478,8 @@ nav {
   color: #fff;
   white-space: normal;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .trade-dd-menu-desc {
@@ -1462,6 +1488,8 @@ nav {
   line-height: 1.4;
   white-space: normal;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .trade-dd-arrow {
@@ -1486,7 +1514,7 @@ nav {
   top: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
-  width: 450px;
+  width: 500px;
   background: #1a1a1a;
   border: 1px solid #2a2a2a;
   border-radius: 12px;
@@ -1546,6 +1574,13 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.futures-menu-list li {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .futures-menu-item {
@@ -1557,6 +1592,8 @@ nav {
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .futures-menu-item:hover {
@@ -1577,6 +1614,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  min-width: 0;
 }
 
 .futures-menu-title {
@@ -1585,6 +1623,8 @@ nav {
   color: #fff;
   white-space: normal;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .futures-menu-desc {
@@ -1593,6 +1633,8 @@ nav {
   line-height: 1.4;
   white-space: normal;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .futures-arrow {
@@ -1617,7 +1659,7 @@ nav {
   top: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
-  width: 420px;
+  width: 480px;
   background: #1a1a1a;
   border: 1px solid #2a2a2a;
   border-radius: 12px;
@@ -1658,6 +1700,13 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.earn-menu-list li {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .earn-menu-item {
@@ -1669,14 +1718,16 @@ nav {
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .earn-menu-item:hover {
   background: #252525;
 }
 .earn-menu-item img {
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
   flex-shrink: 0;
   background-color: #fff;
   border-radius: 5px;
@@ -1686,6 +1737,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
 }
 
 .earn-menu-title {
@@ -1694,6 +1746,8 @@ nav {
   color: #fff;
   white-space: normal;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .earn-menu-desc {
@@ -1702,6 +1756,8 @@ nav {
   line-height: 1.4;
   white-space: normal;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .earn-arrow {
@@ -1726,12 +1782,12 @@ nav {
   top: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
-  width: 420px;
+  width: 480px;
   background: #1a1a1a;
   border: 1px solid #2a2a2a;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
-  padding: 19.2px;
+  padding: 10px;
   opacity: 0;
   visibility: hidden;
   transform: translateX(-50%) translateY(-10px);
@@ -1767,6 +1823,13 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.square-menu-list li {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .square-menu-item {
@@ -1778,6 +1841,8 @@ nav {
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .square-menu-item:hover {
@@ -1797,6 +1862,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
 }
 
 .square-menu-title {
@@ -1805,6 +1871,8 @@ nav {
   color: #fff;
   white-space: normal;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .square-menu-desc {
@@ -1813,6 +1881,8 @@ nav {
   line-height: 1.4;
   white-space: normal;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .divider {
@@ -2243,11 +2313,21 @@ body.light-mode .theme-toggle-btn .moon-icon {
   }
 
   /* Dropdown adjustments for standard screens */
-  .trade-dropdown-panel,
-  .futures-dropdown-panel,
+  .buycrypto-dropdown-panel {
+    width: 300px;
+  }
+
+  .trade-dd-panel {
+    width: 350px;
+  }
+
+  .futures-dropdown-panel {
+    width: 350px;
+  }
+
   .earn-dropdown-panel,
   .square-dropdown-panel {
-    width: 320px;
+    width: 350px;
   }
 
   .trade-section,
@@ -2260,27 +2340,49 @@ body.light-mode .theme-toggle-btn .moon-icon {
     padding: 12px;
   }
 
+  .buycrypto-menu-title,
+  .trade-dd-menu-title,
   .trade-menu-title,
   .futures-menu-title,
   .earn-menu-title,
   .square-menu-title {
-    white-space: normal;
-    word-wrap: break-word;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
     line-height: 1.3;
   }
 
+  .buycrypto-menu-desc,
+  .trade-dd-menu-desc,
+  .trade-menu-desc,
+  .futures-menu-desc,
+  .earn-menu-desc,
+  .square-menu-desc {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    line-height: 1.4;
+  }
+
+  .buycrypto-menu-content,
+  .trade-dd-menu-content,
   .trade-menu-content,
   .futures-menu-content,
   .earn-menu-content,
   .square-menu-content {
     max-width: 100%;
+    min-width: 0;
   }
 
+  .buycrypto-menu-item,
+  .trade-dd-menu-item,
   .trade-menu-item,
   .futures-menu-item,
   .earn-menu-item,
   .square-menu-item {
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -2355,8 +2457,8 @@ body.light-mode .theme-toggle-btn .moon-icon {
 
   /* Dropdown panels for large screens */
   .buycrypto-dropdown-panel {
-    width: 480px;
-    padding: 18px;
+    width: 450px;
+    padding: 10px;
   }
 
   .buycrypto-header {
@@ -2410,12 +2512,16 @@ body.light-mode .theme-toggle-btn .moon-icon {
     height: 30px;
   }
 
+  .trade-dd-panel {
+    width: 560px;
+  }
+
   .futures-dropdown-panel {
-    width: 480px;
+    width: 450px;
   }
 
   .futures-section {
-    padding: 18px;
+    padding: 10px;
   }
 
   .futures-section-title {
@@ -2424,13 +2530,13 @@ body.light-mode .theme-toggle-btn .moon-icon {
   }
 
   .futures-menu-item {
-    padding: 21px;
-    gap: 24px;
+    padding: 10px;
+    gap: 20px;
   }
 
   .futures-icon {
-    width: 48px;
-    height: 48px;
+    width: 35px;
+    height: 35px;
   }
 
   .futures-menu-title {
@@ -2438,6 +2544,9 @@ body.light-mode .theme-toggle-btn .moon-icon {
   }
 
   .futures-menu-desc {
+    font-size: 19.5px;
+  }
+  .earn-menu-desc {
     font-size: 19.5px;
   }
 
@@ -2456,8 +2565,8 @@ body.light-mode .theme-toggle-btn .moon-icon {
 
   .earn-dropdown-panel,
   .square-dropdown-panel {
-    width: 480px;
-    padding: 18px;
+    width: 550px;
+    padding: 10px;
   }
 
   .earn-menu-item,
@@ -2468,8 +2577,8 @@ body.light-mode .theme-toggle-btn .moon-icon {
 
   .earn-icon,
   .square-icon {
-    width: 48px;
-    height: 48px;
+    width: 35px;
+    height: 35px;
   }
 
   .earn-menu-title,
@@ -2498,25 +2607,25 @@ body.light-mode .theme-toggle-btn .moon-icon {
   }
 
   .more-dropdown-panel {
-    width: 1800px;
-    padding: 90px;
-    gap: 60px;
+    width: 1200px;
+    padding: 20px;
+    gap: 10px;
   }
 
   .more-column-title {
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 9px;
   }
 
   .more-menu-item {
-    font-size: 30px;
-    padding: 27px 30px;
-    gap: 24px;
+    font-size: 25px;
+    padding: 10px 15px;
+    gap: 10px;
   }
 
   .more-icon {
-    width: 60px;
-    height: 60px;
+    width: 35px;
+    height: 35px;
   }
 
   .more-menu-list {
@@ -3598,11 +3707,11 @@ body.light-mode .footer-bottom a:hover {
 
   /* Trade Dropdown - Large Screen */
   .trade-dd-panel {
-    width: 480px;
+    width: 400px;
   }
 
   .trade-dd-section {
-    padding: 18px;
+    padding: 10px;
   }
 
   .trade-dd-section-title {
@@ -3611,13 +3720,13 @@ body.light-mode .footer-bottom a:hover {
   }
 
   .trade-dd-menu-item {
-    padding: 21px;
-    gap: 24px;
+    padding: 10px;
+    gap: 15px;
   }
 
   .trade-dd-icon {
-    width: 48px;
-    height: 48px;
+    width: 35px;
+    height: 35px;
   }
 
   .trade-dd-menu-title {

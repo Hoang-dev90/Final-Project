@@ -139,7 +139,90 @@ function togglePassword(inputId) {
 // Form submission
 document.getElementById("loginForm").addEventListener("submit", (e) => {
   e.preventDefault();
-  alert("Login successful!");
+
+  // Get the email/phone input value
+  const emailInput = document.getElementById("emailOrPhone");
+  const mobileInput = document.getElementById("mobileNumber");
+  const passwordInput =
+    document.getElementById("emailPassword") ||
+    document.getElementById("mobilePassword");
+
+  // Determine which input is visible and get its value
+  let username = "";
+  let password = "";
+
+  if (
+    emailInput &&
+    emailInput.closest("#emailContent").style.display !== "none"
+  ) {
+    username = emailInput.value.trim();
+    password = document.getElementById("emailPassword").value;
+  } else if (
+    mobileInput &&
+    mobileInput.closest("#mobileContent").style.display !== "none"
+  ) {
+    const countryCode = document.getElementById("selectedCode").textContent;
+    username = countryCode + mobileInput.value.trim();
+    password = document.getElementById("mobilePassword").value;
+  }
+
+  // Validate input fields
+  if (!username) {
+    alert("Please enter your email or phone number");
+    return;
+  }
+
+  if (!password) {
+    alert("Please enter your password");
+    return;
+  }
+
+  // Check if user data exists in localStorage
+  const savedUserData = localStorage.getItem("hoangcrypto_user_registration");
+
+  if (savedUserData) {
+    try {
+      const userData = JSON.parse(savedUserData);
+
+      // Simple validation - check if email or phone matches
+      const isValidUser =
+        userData.email === username || userData.phone === username;
+
+      if (isValidUser) {
+        // Save username to localStorage
+        localStorage.setItem("hoangcrypto_username", username);
+        localStorage.setItem("hoangcrypto_logged_in", "true");
+
+        alert("Login successful!");
+
+        // Redirect to main page after successful login
+        setTimeout(() => {
+          window.location.href = "Logout.html";
+        }, 500);
+      } else {
+        alert("Invalid email/phone or password. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error parsing user data:", error);
+      // If there's an error, still allow login for demo purposes
+      localStorage.setItem("hoangcrypto_username", username);
+      localStorage.setItem("hoangcrypto_logged_in", "true");
+
+      alert("Login successful!");
+      setTimeout(() => {
+        window.location.href = "Logout.html";
+      }, 500);
+    }
+  } else {
+    // No user data found, allow login anyway for demo purposes
+    localStorage.setItem("hoangcrypto_username", username);
+    localStorage.setItem("hoangcrypto_logged_in", "true");
+
+    alert("Login successful! (Demo mode - no registration data found)");
+    setTimeout(() => {
+      window.location.href = "Logout.html";
+    }, 500);
+  }
 });
 
 // Navigate to signup page

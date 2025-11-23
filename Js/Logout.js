@@ -142,4 +142,64 @@ function updateBalance(btcAmount) {
 document.addEventListener("DOMContentLoaded", function () {
   // Example: User has 0.00123 BTC
   updateBalance(1);
+
+  // Load and display username from localStorage
+  const savedUsername = localStorage.getItem("hoangcrypto_username");
+  const usernameElement = document.querySelector(".avatar-username");
+
+  if (savedUsername && usernameElement) {
+    usernameElement.textContent = savedUsername;
+  }
+
+  // Generate random UID if not exists
+  let uid = localStorage.getItem("hoangcrypto_uid");
+  if (!uid) {
+    uid = "UID: " + Math.floor(100000000 + Math.random() * 900000000);
+    localStorage.setItem("hoangcrypto_uid", uid);
+  }
+
+  const uidElement = document.querySelector(".avatar-uid");
+  if (uidElement) {
+    uidElement.textContent = uid;
+  }
+
+  // Handle dark mode toggle in avatar dropdown
+  const avatarDarkModeToggle = document.getElementById("avatarDarkModeToggle");
+  const body = document.body;
+
+  if (avatarDarkModeToggle) {
+    // Set initial state based on current theme
+    const currentTheme = localStorage.getItem("theme");
+    avatarDarkModeToggle.checked = currentTheme === "dark" || !currentTheme;
+
+    // Handle toggle change
+    avatarDarkModeToggle.addEventListener("change", function () {
+      if (this.checked) {
+        body.classList.remove("light-mode");
+        localStorage.setItem("theme", "dark");
+      } else {
+        body.classList.add("light-mode");
+        localStorage.setItem("theme", "light");
+      }
+
+      // Also trigger the main theme toggle button if exists
+      const mainThemeToggle = document.getElementById("themeToggle");
+      if (mainThemeToggle) {
+        // Sync the main toggle button state (optional visual sync)
+      }
+    });
+  }
+
+  // Handle logout
+  const logoutItem = document.querySelector(".logout-item");
+  if (logoutItem) {
+    logoutItem.addEventListener("click", function () {
+      // Clear user session data
+      localStorage.removeItem("hoangcrypto_username");
+      localStorage.removeItem("hoangcrypto_logged_in");
+
+      // Redirect to login page
+      window.location.href = "login.html";
+    });
+  }
 });
