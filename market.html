@@ -88,6 +88,7 @@
         <!-- Left Section -->
         <div class="nav-left">
           <!-- Logo -->
+           <a href="./Logout.html" class="logo-link">
             <div class="logo-icon">
               <img src="./Image/Logo 1.png" alt="Logo" />
             </div>
@@ -1291,6 +1292,1110 @@
       </div>
     </nav>
 
+<div class="ticker-tabs-section">
+        <div class="ticker-tabs">
+            <span class="ticker-tab active" onclick="switchToMarkets()">Markets</span>
+            <span class="ticker-tab" onclick="switchToOpportunities()">Opportunities</span>
+        </div>
+    </div>
+    </div>
+
+    <div class="ticker-section">
+        <div class="ticker-wrapper">
+            <div class="ticker-scroll">
+                <div class="ticker-content" id="tickerContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Markets Page -->
+    <div id="marketsPage" class="page-content active">
+        <div class="header">
+            <div class="nav">
+                <a href="#" class="nav-item">Favorites</a>
+                <a href="#" class="nav-item">Spot</a>
+                <a href="#" class="nav-item active">Futures</a>
+                <a href="#" class="nav-item">Margin</a>
+                <a href="#" class="nav-item">Onchain</a>
+                <a href="#" class="nav-item">Stocks</a>
+            </div>
+            <div class="search-box">
+                <span style="font-size: 20px;">🔔</span>
+                <div style="position: relative; flex: 1;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;position:absolute;left:10px;top:50%;transform:translateY(-50%);color:#888;" class="bit-input-search-icon"><path d="M17.135 16.135a8 8 0 10-2.18 1.82L18.5 21.5l2-2-3.365-3.365zM16.5 11a5.5 5.5 0 11-11 0 5.5 5.5 0 0111 0z"></path></svg>
+                    <input type="text" class="search-input" placeholder="Search coin" style="padding-left: 35px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tabs-nav-btn left" onclick="scrollTabsLeft()">‹</button>
+            <div class="tabs-container" id="tabsContainer">
+                <div class="tab">USDT-M Futures</div>
+                <div class="tab active">All</div>
+                <div class="tab">New</div>
+                <div class="tab">Stocks</div>
+                <div class="tab">Pre-Market</div>
+                <div class="tab">Innovation</div>
+                <div class="tab">AI</div>
+                <div class="tab">Meme</div>
+                <div class="tab">Solana ecosystem</div>
+                <div class="tab">Public Chain</div>
+                <div class="tab">GameFi</div>
+                <div class="tab">LSD</div>
+                <div class="tab">TON ecosystem</div>
+            </div>
+            <button class="tabs-nav-btn right" onclick="scrollTabsRight()">›</button>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Pair</th>
+                        <th>Last price</th>
+                        <th>Change</th>
+                        <th>Amount</th>
+                        <th>24h change</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Page 1 Data -->
+                    <tr>
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/BTC.webp" alt="BTC"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">BTCUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">90,744.3</td>
+                        <td class="change negative">-4.89%</td>
+                        <td class="amount">5.39B</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/ETH.webp" alt="ETH"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">ETHUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">3,022.06</td>
+                        <td class="change negative">-4.83%</td>
+                        <td class="amount">4.66B</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/SOL.webp" alt="SOL"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">SOLUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">134.728</td>
+                        <td class="change negative">-3.79%</td>
+                        <td class="amount">726.64M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/XRP.png" alt="XRP"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">XRPUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">2.1627</td>
+                        <td class="change negative">-4.06%</td>
+                        <td class="amount">415.75M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/ZEC.webp" alt="ZEC"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">ZECUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">627.1</td>
+                        <td class="change negative">-9.84%</td>
+                        <td class="amount">137.34M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/TSLA.webp" alt="TSLA"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">TSLAUSDT</span>
+                                    <span class="pair-type">Perpetual<span class="fee-badge">90% Fees Off</span></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">406.78</td>
+                        <td class="change positive">+0.84%</td>
+                        <td class="amount">126.18M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/DOGE.webp" alt="DOGE"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">DOGEUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">0.1543</td>
+                        <td class="change negative">-4.27%</td>
+                        <td class="amount">124.86M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon" style="background: #ffe135">🍌</div>
+                                <div class="pair-info">
+                                    <span class="pair-name">BANANAS31USDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">0.003210</td>
+                        <td class="change negative">-23.9%</td>
+                        <td class="amount">120.72M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/ASTER.webp" alt="ASTER"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">ASTERUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">1.2527</td>
+                        <td class="change positive">+1.04%</td>
+                        <td class="amount">100.25M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/SUIU.webp" alt="SUI"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">SUIUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">1.6419</td>
+                        <td class="change negative">-3.52%</td>
+                        <td class="amount">85.91M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Page 2 Data (hidden by default) -->
+                    <tr style="display: none;" data-page="2">
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/BNB.webp" alt="BNB"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">BNBUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">901.83</td>
+                        <td class="change negative">-3.68%</td>
+                        <td class="amount">77.15M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="display: none;" data-page="2">
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/ZEN.webp" alt="ZEN"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">ZENUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">15.974</td>
+                        <td class="change positive">+13.38%</td>
+                        <td class="amount">74.66M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="display: none;" data-page="2">
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon" style="background: #ff6b35">L</div>
+                                <div class="pair-info">
+                                    <span class="pair-name">LIGHTUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">1.9104</td>
+                        <td class="change positive">+5.54%</td>
+                        <td class="amount">71.97M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="display: none;" data-page="2">
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/ADA.webp" alt="ADA"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">ADAUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">0.4687</td>
+                        <td class="change negative">-4.99%</td>
+                        <td class="amount">61.66M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="display: none;" data-page="2">
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/LTC.webp" alt="LTC"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">LTCUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">92.95</td>
+                        <td class="change negative">-4.43%</td>
+                        <td class="amount">60.74M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="display: none;" data-page="2">
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/UNI.webp" alt="UNI"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">UNIUSDT</span>
+                                    <span class="pair-type">Perpetual<span class="fee-badge" style="background:#065f46;color:#10b981">SuperPairs</span></span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">7.539</td>
+                        <td class="change positive">+2.67%</td>
+                        <td class="amount">60.03M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="display: none;" data-page="2">
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/STRK.png" alt="STRK"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">STRKUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">0.1865</td>
+                        <td class="change negative">-12.81%</td>
+                        <td class="amount">59.63M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="display: none;" data-page="2">
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/ICPU.webp" alt="ICP"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">ICPUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">5.602</td>
+                        <td class="change positive">+12.69%</td>
+                        <td class="amount">59.55M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="display: none;" data-page="2">
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/HUPE.webp" alt="HYPE"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">HYPEUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">40.522</td>
+                        <td class="change positive">+4.87%</td>
+                        <td class="amount">55.67M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="display: none;" data-page="2">
+                        <td><span class="star">☆</span></td>
+                        <td>
+                            <div class="pair-cell">
+                                <div class="coin-icon"><img src="./Icon Coin/PEPE.webp" alt="PEPE"></div>
+                                <div class="pair-info">
+                                    <span class="pair-name">PEPEUSDT</span>
+                                    <span class="pair-type">Perpetual</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price">0.(5)4814</td>
+                        <td class="change negative">-2.49%</td>
+                        <td class="amount">54.19M</td>
+                        <td><canvas class="chart" width="144" height="40"></canvas></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn btn-details">Details</button>
+                                <button class="btn btn-trade">Trade</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="pagination">
+                <button class="page-btn" onclick="previousPage()">‹</button>
+                <button class="page-btn" onclick="goToPage(1)">1</button>
+                <button class="page-btn" onclick="goToPage(2)">2</button>
+                <button class="page-btn" onclick="goToPage(3)">3</button>
+                <button class="page-btn" onclick="goToPage(4)">4</button>
+                <button class="page-btn" onclick="goToPage(5)">5</button>
+                <span class="page-btn" style="cursor: default;">...</span>
+                <button class="page-btn" onclick="goToPage(20)">20</button>
+                <button class="page-btn" onclick="nextPage()">›</button>
+            </div>
+        </div>
+
+        <div class="affiliate-section">
+            <div class="affiliate-card">
+                <div class="affiliate-image">
+                    <img src="./Image/banner 5.jpeg" alt="HoangCrypto© Affiliate">
+                </div>
+            </div>
+            
+            <div class="affiliate-card">
+                <div class="affiliate-image">
+                    <img src="./Image/banner 6.png" alt="Monetize insights">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="breadcrumb">
+                <span>HoangCrypto©</span>
+                <span>/</span>
+                <span>Markets</span>
+                <span>/</span>
+                <span>Markets</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Opportunities Page -->
+    <div id="opportunitiesPage" class="page-content opportunities-page">
+        <div class="ai-picks-section">
+            <div class="section-header">
+                <h2 class="section-title">AI picks</h2>
+                <span class="info-icon">?</span>
+            </div>
+            <div class="ai-picks-grid">
+                <div class="ai-pick-card">
+                    <div class="pick-header">
+                        <div class="pick-icon">
+                          <img src="./Image/BAKE.webp" alt="BAKE">
+                        </div>
+                        <div class="pick-info">
+                            <div class="pick-name">BAKE</div>
+                            <div class="pick-subtitle">Breakout of recent highs</div>
+                        </div>
+                        <div>
+                            <div class="pick-change" style="color: #22c55e;">+0.00%</div>
+                            <div class="pick-price">--</div>
+                        </div>
+                    </div>
+                    <div class="pick-description">BAKE: Circle's Euro-Backed Stablecoin Bridging Euros and the Web3 Economy</div>
+                    <div class="pick-chart">
+                        <span class="chart-label bullish">Bullish 56.93%</span>
+                        <span class="chart-label bearish">Bearish 43.07%</span>
+                    </div>
+                </div>
+
+                <div class="ai-pick-card">
+                    <div class="pick-header">
+                        <div class="pick-icon">
+                           <img src="./Image/ALPACA.webp" alt="ALPACA">
+                        </div>
+                        <div class="pick-info">
+                            <div class="pick-name">ALPACA</div>
+                            <div class="pick-subtitle">Bullish signal</div>
+                        </div>
+                        <div>
+                            <div class="pick-change" style="color: #ef4444;">-11.88%</div>
+                            <div class="pick-price">0.09335</div>
+                        </div>
+                    </div>
+                    <div class="pick-description"></div>
+                    <div class="pick-chart">
+                        <span class="chart-label bullish">Bullish 56.93%</span>
+                        <span class="chart-label bearish">Bearish 43.07%</span>
+                    </div>
+                </div>
+
+                <div class="ai-pick-card">
+                    <div class="pick-header">
+                        <div class="pick-icon">
+                          <img src="./Image/WINGS.webp" alt="WING">
+                        </div>
+                        <div class="pick-info">
+                            <div class="pick-name">WING</div>
+                            <div class="pick-subtitle">Breakout of recent highs</div>
+                        </div>
+                        <div>
+                            <div class="pick-change" style="color: #22c55e;">+0.00%</div>
+                            <div class="pick-price">--</div>
+                        </div>
+                    </div>
+                    <div class="pick-description"></div>
+                    <div class="pick-chart">
+                        <span class="chart-label bullish">Bullish 33.83%</span>
+                        <span class="chart-label bearish">Bearish 66.17%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sectors-calendar-wrapper">
+            <div class="sectors-wrapper">
+                <div class="section-header">
+                    <h2 class="section-title">Gainer sectors</h2>
+                    <span class="more-link">More ›</span>
+                </div>
+                <div class="sectors-grid">
+                    <div class="sector-card">
+                        <div class="sector-name">Solana ecosystem</div>
+                        <div class="sector-change" style="color: #22c55e;">+4.7%</div>
+                        <div class="sector-tokens">
+                            <div class="token-item">
+                                <img class="w-[20px] h-[20px] rounded-[50%]" alt="symbol" loading="lazy" src="./Icon Coin/MYRO.webp">
+                                <span class="token-name">MYRO</span>
+                                <span class="token-change" style="color: #22c55e;">+35.23%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sector-card">
+                        <div class="sector-name">BRC20</div>
+                        <div class="sector-change" style="color: #ef4444;">-0.38%</div>
+                        <div class="sector-tokens">
+                            <div class="token-item">
+                                <img class="w-[20px] h-[20px] rounded-[50%]" alt="symbol" loading="lazy" src="./Icon Coin/SATS.webp">
+                                <span class="token-name">SATS</span>
+                                <span class="token-change" style="color: #22c55e;">+3.26%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sector-card">
+                        <div class="sector-name">Inscription</div>
+                        <div class="sector-change" style="color: #ef4444;">-0.38%</div>
+                        <div class="sector-tokens">
+                            <div class="token-item">
+                               <img class="w-[20px] h-[20px] rounded-[50%]" alt="symbol" loading="lazy" src="./Icon Coin/SATS.webp">
+                                <span class="token-name">SATS</span>
+                                <span class="token-change" style="color: #22c55e;">+3.26%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sector-card">
+                        <div class="sector-name">SHIB</div>
+                        <div class="sector-change" style="color: #ef4444;">-1.23%</div>
+                        <div class="sector-tokens">
+                            <div class="token-item">
+                               <img class="w-[20px] h-[20px] rounded-[50%]" alt="symbol" loading="lazy" src="./Icon Coin/SHIB.webp">
+                                <span class="token-name">SHIB</span>
+                                <span class="token-change" style="color: #22c55e;">+3.42%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sector-card">
+                        <div class="sector-name">Fan Token</div>
+                        <div class="sector-change" style="color: #ef4444;">-1.71%</div>
+                        <div class="sector-tokens">
+                            <div class="token-item">
+                               <img class="w-[20px] h-[20px] rounded-[50%]" alt="symbol" loading="lazy" src="./Icon Coin/PSG.webp">
+                                <span class="token-name">PSG</span>
+                                <span class="token-change" style="color: #ef4444;">-0.47%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sector-card">
+                        <div class="sector-name">Meme</div>
+                        <div class="sector-change" style="color: #ef4444;">-1.95%</div>
+                        <div class="sector-tokens">
+                            <div class="token-item">
+                                <img class="w-[20px] h-[20px] rounded-[50%]" alt="symbol" loading="lazy" src="./Icon Coin/TURBO.webp">
+                                <span class="token-name">TURBO</span>
+                                <span class="token-change" style="color: #22c55e;">+16.44%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-section">
+                <div class="section-header">
+                    <h2 class="section-title">Calendar</h2>
+                    <span class="more-link">More ›</span>
+                </div>
+                <div class="calendar-content">
+                    <div class="calendar-item">
+                        <div class="calendar-time">
+                            <div class="time-hour">07:00</div>
+                            <div class="time-min">11-19</div>
+                        </div>
+                        <div class="calendar-detail">
+                            <div class="calendar-title">The U.S. Financial Accounting Standards Board (FASB) will hold a meeting on November 19 to...</div>
+                            <div class="calendar-stars">★★★★★</div>
+                        </div>
+                    </div>
+
+                    <div class="calendar-item">
+                        <div class="calendar-time">
+                            <div class="time-hour">02:00</div>
+                            <div class="time-min">11-20</div>
+                        </div>
+                        <div class="calendar-detail">
+                            <div class="calendar-title">The U.S. Federal Reserve will release the minutes of its monetary policy meeting at 3:00 AM Beijin...</div>
+                            <div class="calendar-stars">★★★★★</div>
+                        </div>
+                    </div>
+
+                    <div class="calendar-item">
+                        <div class="calendar-time">
+                            <div class="time-hour">07:00</div>
+                            <div class="time-min">11-20</div>
+                        </div>
+                        <div class="calendar-detail">
+                            <div class="calendar-title">Aptos (ZRO) will unlock 25.71 million tokens at 19:00 on November 20, valued at approximately...</div>
+                            <div class="calendar-stars">★★★★★</div>
+                        </div>
+                    </div>
+
+                    <div class="calendar-item">
+                        <div class="calendar-time">
+                            <div class="time-hour">07:00</div>
+                            <div class="time-min">11-20</div>
+                        </div>
+                        <div class="calendar-detail">
+                            <div class="calendar-title">River will launch the River Pts public repurchase execution plan. Eligible addresses must send th...</div>
+                            <div class="calendar-stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-movers-section">
+            <div class="section-header">
+                <h2 class="section-title">Top movers</h2>
+                <span class="more-link">More ›</span>
+            </div>
+            <div class="top-movers-content">
+                <div class="top-mover-item">
+                    <div class="top-mover-info">
+                        <div class="top-mover-name">PI <span style="color: #666; font-weight: 400;">/USDT</span></div>
+                        <div class="top-mover-time">11/20 09:37:26</div>
+                    </div>
+                    <div class="top-mover-label">24h high</div>
+                    <div class="top-mover-value">0.2441</div>
+                </div>
+
+                <div class="top-mover-item">
+                    <div class="top-mover-info">
+                        <div class="top-mover-name">LINEA <span style="color: #666; font-weight: 400;">/USDT</span></div>
+                        <div class="top-mover-time">11/20 09:37:25</div>
+                    </div>
+                    <div class="top-mover-label">24h high</div>
+                    <div class="top-mover-value">0.01041</div>
+                </div>
+
+                <div class="top-mover-item">
+                    <div class="top-mover-info">
+                        <div class="top-mover-name">FRAG <span style="color: #666; font-weight: 400;">/USDT</span></div>
+                        <div class="top-mover-time">11/20 09:36:29</div>
+                    </div>
+                    <div class="top-mover-label">5m rise</div>
+                    <div class="top-mover-value">+4.26%</div>
+                </div>
+
+                <div class="top-mover-item">
+                    <div class="top-mover-info">
+                        <div class="top-mover-name">VANA <span style="color: #666; font-weight: 400;">/USDT</span></div>
+                        <div class="top-mover-time">11/20 09:36:27</div>
+                    </div>
+                    <div class="top-mover-label">24h high</div>
+                    <div class="top-mover-value">2.9134</div>
+                </div>
+
+                <div class="top-mover-item">
+                    <div class="top-mover-info">
+                        <div class="top-mover-name">VANA <span style="color: #666; font-weight: 400;">/USDT</span></div>
+                        <div class="top-mover-time">11/20 09:35:50</div>
+                    </div>
+                    <div class="top-mover-label">24h high</div>
+                    <div class="top-mover-value">2.912</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2 class="section-title">Market movers</h2>
+            <span class="more-link">More ›</span>
+        </div>
+        <div class="movers-section">
+            <div class="mover-card">
+                <div class="mover-header">
+                    <span class="mover-title">Gainers</span>
+                    <span style="color: #999; font-size: 14px;">›</span>
+                </div>
+                <div class="mover-list">
+                    <div class="mover-item">
+                        <div class="mover-icon" style="background: #666;"><span style="color: #fff;">D</span></div>
+                        <div class="mover-info">
+                            <div class="mover-pair">DUSK /USDT</div>
+                        </div>
+                        <div class="mover-price">
+                            <div class="mover-value">0.07830</div>
+                            <div class="mover-change" style="color: #22c55e;">+35.23%</div>
+                        </div>
+                    </div>
+                    <div class="mover-item">
+                        <div class="mover-icon" style="background: #64748b;"><span style="color: #fff;">R</span></div>
+                        <div class="mover-info">
+                            <div class="mover-pair">RESOLV /USDT</div>
+                        </div>
+                        <div class="mover-price">
+                            <div class="mover-value">0.2174</div>
+                            <div class="mover-change" style="color: #22c55e;">+23.25%</div>
+                        </div>
+                    </div>
+                    <div class="mover-item">
+                        <div class="mover-icon" style="background: #8b5cf6;"><span style="color: #fff;">U</span></div>
+                        <div class="mover-info">
+                            <div class="mover-pair">UAI /USDT</div>
+                        </div>
+                        <div class="mover-price">
+                            <div class="mover-value">0.2012</div>
+                            <div class="mover-change" style="color: #22c55e;">+16.91%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mover-card">
+                <div class="mover-header">
+                    <span class="mover-title">Losers</span>
+                    <span style="color: #999; font-size: 14px;">›</span>
+                </div>
+                <div class="mover-list">
+                    <div class="mover-item">
+                        <div class="mover-icon" style="background: #ffe135;"><span style="color: #000;">B</span></div>
+                        <div class="mover-info">
+                            <div class="mover-pair">BANANAS31 /USDT</div>
+                        </div>
+                        <div class="mover-price">
+                            <div class="mover-value">0.003239</div>
+                            <div class="mover-change" style="color: #ef4444;">-22.27%</div>
+                        </div>
+                    </div>
+                    <div class="mover-item">
+                        <div class="mover-icon" style="background: #ef4444;"><span style="color: #fff;">S</span></div>
+                        <div class="mover-info">
+                            <div class="mover-pair">SOON /USDT</div>
+                        </div>
+                        <div class="mover-price">
+                            <div class="mover-value">1.2915</div>
+                            <div class="mover-change" style="color: #ef4444;">-21.25%</div>
+                        </div>
+                    </div>
+                    <div class="mover-item">
+                        <div class="mover-icon" style="background: #8b5cf6;"><span style="color: #fff;">J</span></div>
+                        <div class="mover-info">
+                            <div class="mover-pair">JELLYJELLY /USDT</div>
+                        </div>
+                        <div class="mover-price">
+                            <div class="mover-value">0.04362</div>
+                            <div class="mover-change" style="color: #ef4444;">-20.69%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mover-card">
+                <div class="mover-header">
+                    <span class="mover-title">Newly Listed</span>
+                    <span style="color: #999; font-size: 14px;">›</span>
+                </div>
+                <div class="mover-list">
+                    <div class="mover-item">
+                        <div class="mover-icon" style="background: #f97316;"><span style="color: #fff;">E</span></div>
+                        <div class="mover-info">
+                            <div class="mover-pair">ELIZAOS /USDT</div>
+                        </div>
+                        <div class="mover-price">
+                            <div class="mover-value">0.007893</div>
+                            <div class="mover-change" style="color: #22c55e;">+9.12%</div>
+                        </div>
+                    </div>
+                    <div class="mover-item">
+                        <div class="mover-icon" style="background: #10b981;"><span style="color: #fff;">P</span></div>
+                        <div class="mover-info">
+                            <div class="mover-pair">PLANCK /USDT</div>
+                        </div>
+                        <div class="mover-price">
+                            <div class="mover-value">0.1104</div>
+                            <div class="mover-change" style="color: #ef4444;">-16.49%</div>
+                        </div>
+                    </div>
+                    <div class="mover-item">
+                        <div class="mover-icon" style="background: #64748b;"><span style="color: #fff;">A</span></div>
+                        <div class="mover-info">
+                            <div class="mover-pair">ALLO /USDT</div>
+                        </div>
+                        <div class="mover-price">
+                            <div class="mover-value">0.1789</div>
+                            <div class="mover-change" style="color: #ef4444;">-15.65%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mover-card">
+                <div class="mover-header">
+                    <span class="mover-title">Volume</span>
+                    <span style="color: #999; font-size: 14px;">›</span>
+                </div>
+                <div class="mover-list">
+                    <div class="mover-item">
+                        <div class="mover-icon" style="background: #f7931a;"><span style="color: #fff;">₿</span></div>
+                        <div class="mover-info">
+                            <div class="mover-pair">BTC /USDT</div>
+                        </div>
+                        <div class="mover-price">
+                            <div class="mover-value">89,980.9</div>
+                            <div class="mover-change" style="color: #ef4444;">-5.44%</div>
+                        </div>
+                    </div>
+                    <div class="mover-item">
+                        <div class="mover-icon" style="background: #627eea;"><span style="color: #fff;">Ξ</span></div>
+                        <div class="mover-info">
+                            <div class="mover-pair">ETH /USDT</div>
+                        </div>
+                        <div class="mover-price">
+                            <div class="mover-value">2,998.83</div>
+                            <div class="mover-change" style="color: #ef4444;">-5.81%</div>
+                        </div>
+                    </div>
+                    <div class="mover-item">
+                        <div class="mover-icon" style="background: #14f195;"><span style="color: #000;">S</span></div>
+                        <div class="mover-info">
+                            <div class="mover-pair">SOL /USDT</div>
+                        </div>
+                        <div class="mover-price">
+                            <div class="mover-value">135.73</div>
+                            <div class="mover-change" style="color: #ef4444;">-3.43%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trading Data Section -->
+        <div class="trading-data-section">
+            <div class="trading-tabs">
+                <span class="trading-tab active">Trading data</span>
+                <span class="trading-tab">Overall data</span>
+            </div>
+
+            <div class="trading-controls">
+                <button class="trading-type-btn active">Spot</button>
+                <button class="trading-type-btn">Futures</button>
+                <div class="coin-selector">
+                    <span style="color: #f7931a;">●</span>
+                    <span style="color: #fff; font-size: 13px; font-weight: 500;">BTC/USDT</span>
+                    <span style="color: #666; font-size: 12px;">10x</span>
+                    <span style="color: #999;">▼</span>
+                </div>
+            </div>
+
+            <div class="trading-charts-grid">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title">
+                            Fund flow analysis
+                            <span class="chart-info-icon">?</span>
+                        </div>
+                        <span class="chart-expand">⤢</span>
+                    </div>
+                    <div class="chart-tabs">
+                        <span class="chart-tab active">15m</span>
+                        <span class="chart-tab">30m</span>
+                        <span class="chart-tab">1h</span>
+                        <span class="chart-tab">2h</span>
+                        <span class="chart-tab">4h</span>
+                        <span class="chart-tab">1d</span>
+                    </div>
+                    <canvas id="fundFlowChart" class="chart-canvas" width="350" height="350"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title">5d Whale order net inflow (BTC)</div>
+                        <span class="chart-expand">⤢</span>
+                    </div>
+                    <div class="chart-metric">5d main funds net inflow<br>-2.90K</div>
+                    <canvas id="whaleOrderChart" class="chart-canvas" width="400" height="220"></canvas>
+                    <div class="chart-time-label">Last 24h</div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title">24h funds net inflow (BTC)</div>
+                        <span class="chart-expand">⤢</span>
+                    </div>
+                    <div class="chart-value">34.639405</div>
+                    <canvas id="fundsInflowChart" class="chart-canvas" width="400" height="220"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title">
+                            Margin loan growth rate
+                            <span class="chart-info-icon">?</span>
+                        </div>
+                        <span class="chart-expand">⤢</span>
+                    </div>
+                    <div class="chart-tabs">
+                        <span class="chart-tab active">24h</span>
+                        <span class="chart-tab">30D</span>
+                    </div>
+                    <canvas id="marginLoanChart" class="chart-canvas" width="400" height="220"></canvas>
+                    <div class="coin-selector" style="width: fit-content; margin-top: 10px;">
+                        <span style="color: #f7931a;">●</span>
+                        <span style="color: #fff; font-size: 13px;">BTC</span>
+                        <span style="color: #999;">▼</span>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title">
+                            Leveraged long-short ratio
+                            <span class="chart-info-icon">?</span>
+                        </div>
+                        <span class="chart-expand">⤢</span>
+                    </div>
+                    <div class="chart-tabs">
+                        <span class="chart-tab active">24h</span>
+                        <span class="chart-tab">30D</span>
+                    </div>
+                    <canvas id="longShortChart" class="chart-canvas" width="400" height="220"></canvas>
+                    <div class="coin-selector" style="width: fit-content; margin-top: 10px;">
+                        <span style="color: #f7931a;">●</span>
+                        <span style="color: #fff; font-size: 13px;">BTC</span>
+                        <span style="color: #999;">▼</span>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title">
+                            Isolated margin borrowing ratio
+                            <span class="chart-info-icon">?</span>
+                        </div>
+                        <span class="chart-expand">⤢</span>
+                    </div>
+                    <div class="chart-tabs">
+                        <span class="chart-tab active">24h</span>
+                        <span class="chart-tab">30D</span>
+                    </div>
+                    <canvas id="marginBorrowChart" class="chart-canvas" width="400" height="220"></canvas>
+                    <div class="coin-selector" style="width: fit-content; margin-top: 10px;">
+                        <span style="color: #f7931a;">●</span>
+                        <span style="color: #fff; font-size: 13px;">BTC</span>
+                        <span style="color: #999;">▼</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="breadcrumb">
+                <span>HoangCrypto©</span>
+                <span>/</span>
+                <span>Markets</span>
+                <span>/</span>
+                <span>Opportunities</span>
+            </div>
+        </div>
+    </div>
 
 
      <!-- Floating Support Button -->

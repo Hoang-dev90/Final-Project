@@ -309,6 +309,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   height: 90px;
+  flex-wrap: nowrap;
 }
 
 /* Left Section */
@@ -316,9 +317,17 @@ nav {
   display: flex;
   align-items: center;
   gap: 7.5px;
+  flex-shrink: 0;
 }
 
 /* Logo */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
 .logo-icon {
   width: 60px;
   height: 60px;
@@ -344,6 +353,8 @@ nav {
   gap: 19px;
   list-style: none;
   margin-left: 45px;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
 }
 
 .nav-link {
@@ -355,6 +366,7 @@ nav {
   font-weight: 500;
   position: relative;
   transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -381,6 +393,8 @@ nav {
   display: flex;
   align-items: center;
   gap: 18px;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
 }
 
 .icon-group {
