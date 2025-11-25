@@ -1172,6 +1172,7 @@ body {
   outline: none;
   border-radius: 2px;
   -webkit-appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
