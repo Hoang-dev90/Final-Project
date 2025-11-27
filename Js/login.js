@@ -140,30 +140,32 @@ function togglePassword(inputId) {
 document.getElementById("loginForm").addEventListener("submit", (e) => {
   e.preventDefault();
 
+  console.log("Form submitted"); // Debug log
+
   // Get the email/phone input value
   const emailInput = document.getElementById("emailOrPhone");
   const mobileInput = document.getElementById("mobileNumber");
-  const passwordInput =
-    document.getElementById("emailPassword") ||
-    document.getElementById("mobilePassword");
+  const emailContent = document.getElementById("emailContent");
+  const mobileContent = document.getElementById("mobileContent");
 
   // Determine which input is visible and get its value
   let username = "";
   let password = "";
 
-  if (
-    emailInput &&
-    emailInput.closest("#emailContent").style.display !== "none"
-  ) {
+  // Check which tab is active by checking display style or visibility
+  const isEmailTab =
+    mobileContent.style.display === "none" ||
+    window.getComputedStyle(mobileContent).display === "none";
+
+  if (isEmailTab) {
     username = emailInput.value.trim();
     password = document.getElementById("emailPassword").value;
-  } else if (
-    mobileInput &&
-    mobileInput.closest("#mobileContent").style.display !== "none"
-  ) {
+    console.log("Email tab - Username:", username); // Debug log
+  } else {
     const countryCode = document.getElementById("selectedCode").textContent;
     username = countryCode + mobileInput.value.trim();
     password = document.getElementById("mobilePassword").value;
+    console.log("Mobile tab - Username:", username); // Debug log
   }
 
   // Validate input fields
